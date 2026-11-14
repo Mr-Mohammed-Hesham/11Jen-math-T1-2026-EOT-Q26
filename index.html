@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🎯 Mutually Exclusive & Non-Exclusive Events - رياضيات 11 عام | Mr. Mohammed Hesham</title>
-<meta name="description" content="امتحان تفاعلي عن إيجاد احتمالات الأحداث المنفصلة وغير المنفصلة - رياضيات صف 11 عام - ص 197">
+<title>🎯 Mutually Exclusive Events (Version 2) - رياضيات 11 عام | Mr. Mohammed Hesham</title>
+<meta name="description" content="امتحان تفاعلي نسخة ثانية عن احتمالات الأحداث المنفصلة وغير المنفصلة - رياضيات صف 11 عام - ص 197">
 <meta name="author" content="Mr. Mohammed Hesham">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
-body { font-family: 'Cairo', sans-serif; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); }
+body { font-family: 'Cairo', sans-serif; background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); }
 body.en-mode { font-family: 'Inter', sans-serif; direction: ltr; }
 .arabic-math { font-family: 'Amiri', 'Cairo', serif; }
 .correct { background-color: #dcfce7 !important; border-color: #16a34a !important; }
@@ -23,24 +23,24 @@ body.en-mode { font-family: 'Inter', sans-serif; direction: ltr; }
 .grade-good { background: #fef3c7; color: #92400e; }
 .grade-pass { background: #dbeafe; color: #1e40af; }
 .grade-fail { background: #fee2e2; color: #991b1b; }
-.lang-switch { position: fixed; top: 16px; left: 16px; z-index: 100; background: white; padding: 6px; border-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; gap: 4px; border: 2px solid #b45309; }
+.lang-switch { position: fixed; top: 16px; left: 16px; z-index: 100; background: white; padding: 6px; border-radius: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); display: flex; gap: 4px; border: 2px solid #15803d; }
 body.en-mode .lang-switch { left: auto; right: 16px; }
 .lang-btn { padding: 6px 14px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: 0.3s; border: none; font-size: 0.875rem; background: transparent; color: #6b7280; }
-.lang-btn.active { background: #b45309; color: white; }
-.shuffle-badge { display: inline-block; background: linear-gradient(135deg, #b45309, #92400e); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-right: 8px; }
+.lang-btn.active { background: #15803d; color: white; }
+.shuffle-badge { display: inline-block; background: linear-gradient(135deg, #15803d, #166534); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-right: 8px; }
 body.en-mode .shuffle-badge { margin-right: 0; margin-left: 8px; }
-.math-display { display: inline-block; direction: ltr; font-family: 'Amiri', serif; font-size: 1.15em; padding: 2px 8px; background: #fef3c7; border-radius: 4px; margin: 2px; color: #92400e; font-weight: 700; }
+.math-display { display: inline-block; direction: ltr; font-family: 'Amiri', serif; font-size: 1.15em; padding: 2px 8px; background: #dcfce7; border-radius: 4px; margin: 2px; color: #166534; font-weight: 700; }
 .save-indicator { position: fixed; bottom: 20px; left: 20px; z-index: 200; background: #10b981; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
 body.en-mode .save-indicator { left: auto; right: 20px; }
 .save-indicator.show { opacity: 1; }
-.formula-box { background: #fef3c7; border: 2px solid #b45309; border-radius: 8px; padding: 12px; margin: 10px 0; font-family: 'Amiri', serif; direction: ltr; text-align: center; }
+.formula-box { background: #dcfce7; border: 2px solid #15803d; border-radius: 8px; padding: 12px; margin: 10px 0; font-family: 'Amiri', serif; direction: ltr; text-align: center; }
 .svg-graph { display: block; margin: 12px auto; background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 8px; max-width: 100%; }
 .graph-container { text-align: center; margin: 10px 0; }
 .module-badge { display: inline-block; padding: 4px 16px; border-radius: 20px; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; }
-.module-1 { background: #fef3c7; color: #92400e; }
+.module-1 { background: #dcfce7; color: #166534; }
 .module-2 { background: #dbeafe; color: #1e40af; }
 .module-3 { background: #fce7f3; color: #9f1239; }
-.module-4 { background: #ecfdf5; color: #065f46; }
+.module-4 { background: #fef3c7; color: #92400e; }
 .module-5 { background: #ede9fe; color: #5b21b6; }
 .module-6 { background: #fee2e2; color: #991b1b; }
 </style>
@@ -49,48 +49,48 @@ body.en-mode .save-indicator { left: auto; right: 20px; }
 
 <div class="lang-switch no-print">
 <button class="lang-btn active" onclick="setLanguage('ar')" id="btn-ar">عربي</button>
-<button class="lang-btn" onclick="setLanguage('en)" id="btn-en">EN</button>
+<button class="lang-btn" onclick="setLanguage('en')" id="btn-en">EN</button>
 </div>
 
 <div id="saveIndicator" class="save-indicator">💾 <span data-ar="تم الحفظ" data-en="Saved">تم الحفظ</span></div>
 
 <div id="timer-container" class="max-w-5xl mx-auto mb-4 text-center no-print">
-<div class="bg-white p-4 rounded-2xl shadow-lg inline-block border-2 border-amber-100">
+<div class="bg-white p-4 rounded-2xl shadow-lg inline-block border-2 border-green-100">
 <span class="text-gray-600 ml-2">⏰ <span data-ar="الوقت المتبقي:" data-en="Time Left:">الوقت المتبقي:</span></span>
-<span id="timer" class="text-2xl font-bold text-amber-700 font-mono">45:00</span>
-<span class="shuffle-badge">🎯 <span data-ar="المنفصلة وغير المنفصلة" data-en="Exclusive & Non-Exclusive">المنفصلة وغير المنفصلة</span> - 30 <span data-ar="سؤال" data-en="Questions">سؤال</span></span>
+<span id="timer" class="text-2xl font-bold text-green-700 font-mono">45:00</span>
+<span class="shuffle-badge">🎯 <span data-ar="المنفصلة وغير المنفصلة" data-en="Exclusive Events">المنفصلة وغير المنفصلة</span> - 30 <span data-ar="سؤال" data-en="Questions">سؤال</span></span>
 </div>
 </div>
 
 <div class="max-w-5xl mx-auto mb-6 flex flex-wrap gap-3 justify-center no-print">
-<button onclick="toggleAnswers()" class="bg-amber-700 hover:bg-amber-800 text-white px-5 py-2 rounded-xl font-medium transition shadow">👀 <span data-ar="إظهار/إخفاء الإجابات" data-en="Show/Hide Answers">إظهار/إخفاء الإجابات</span></button>
+<button onclick="toggleAnswers()" class="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-xl font-medium transition shadow">👀 <span data-ar="إظهار/إخفاء الإجابات" data-en="Show/Hide Answers">إظهار/إخفاء الإجابات</span></button>
 <button onclick="window.print()" class="bg-gray-700 hover:bg-gray-900 text-white px-5 py-2 rounded-xl font-medium transition shadow">🖨️ <span data-ar="طباعة" data-en="Print">طباعة</span></button>
-<button onclick="reshuffleExam()" class="bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-800 hover:to-orange-700 text-white px-5 py-2 rounded-xl font-medium transition shadow">🔄 <span data-ar="أسئلة جديدة" data-en="New Questions">أسئلة جديدة</span></button>
+<button onclick="reshuffleExam()" class="bg-gradient-to-r from-green-700 to-emerald-600 hover:from-green-800 hover:to-emerald-700 text-white px-5 py-2 rounded-xl font-medium transition shadow">🔄 <span data-ar="أسئلة جديدة" data-en="New Questions">أسئلة جديدة</span></button>
 <button onclick="clearProgress()" class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-xl font-medium transition shadow">🗑️ <span data-ar="مسح التقدم" data-en="Clear Progress">مسح التقدم</span></button>
 </div>
 
-<header class="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-2xl mb-8 border-4 border-amber-600">
+<header class="max-w-5xl mx-auto bg-white p-8 rounded-3xl shadow-2xl mb-8 border-4 border-green-600">
 <div class="text-center">
-<div class="inline-block bg-amber-700 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">MATH GRADE 11 GENERAL - QUESTION 26</div>
+<div class="inline-block bg-green-700 text-white px-6 py-2 rounded-full text-sm font-bold mb-4">MATH GRADE 11 GENERAL - QUESTION 26 (VERSION 2)</div>
 <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">🎯 <span data-ar="إيجاد احتمالات الأحداث المنفصلة وغير المنفصلة" data-en="Probabilities of Mutually Exclusive & Non-Exclusive Events">إيجاد احتمالات الأحداث المنفصلة وغير المنفصلة</span></h1>
-<h2 class="text-xl text-amber-700 font-semibold mb-2"><span data-ar="الوحدة 3 - الدرس 3-7: احتمالات الأحداث المنفصلة | ص 197 (8 - 12)" data-en="Unit 3 - Lesson 3-7: Mutually Exclusive Events | Page 197 (8-12)">الوحدة 3 - الدرس 3-7: احتمالات الأحداث المنفصلة | ص 197 (8 - 12)</span></h2>
-<p class="text-gray-600 mb-4"><span data-ar="حدّد أولاً: هل يوجد ناتج مشترك؟ ثم اختر قاعدة الجمع المناسبة" data-en="First decide: is there a common outcome? Then pick the right addition rule">حدّد أولاً: هل يوجد ناتج مشترك؟ ثم اختر قاعدة الجمع المناسبة</span></p>
+<h2 class="text-xl text-green-700 font-semibold mb-2"><span data-ar="الوحدة 3 - الدرس 3-7: احتمالات الأحداث المنفصلة | ص 197 (8 - 12)" data-en="Unit 3 - Lesson 3-7: Mutually Exclusive Events | Page 197 (8-12)">الوحدة 3 - الدرس 3-7: احتمالات الأحداث المنفصلة | ص 197 (8 - 12)</span></h2>
+<p class="text-gray-600 mb-4"><span data-ar="نسخة ثانية بأسئلة مشابهة جديدة: هل يوجد ناتج مشترك؟ اجعلها خطوتك الأولى دائماً" data-en="Second version with new similar items: always ask first — is there a common outcome?">نسخة ثانية بأسئلة مشابهة جديدة: هل يوجد ناتج مشترك؟ اجعلها خطوتك الأولى دائماً</span></p>
 <p class="text-sm text-green-600 font-semibold">💾 <span data-ar="يتم حفظ تقدمك تلقائياً - 30 سؤالاً في 6 أقسام" data-en="Auto-saved - 30 questions in 6 sections">يتم حفظ تقدمك تلقائياً - 30 سؤالاً في 6 أقسام</span></p>
 </div>
 <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-<span>📅 <span data-ar="التاريخ:" data-en="Date:">التاريخ:</span> <input type="text" id="examDate" class="border-b-2 border-amber-300 bg-transparent w-32 text-center"></span>
-<span>😊 <span data-ar="الاسم:" data-en="Name:">الاسم:</span> <input type="text" id="studentName" class="border-b-2 border-amber-300 bg-transparent w-40 text-center" data-placeholder-ar="اكتب اسمك" data-placeholder-en="Your name" placeholder="اكتب اسمك"></span>
-<span>🏫 <span data-ar="الشعبة:" data-en="Class:">الشعبة:</span> <input type="text" id="studentClass" class="border-b-2 border-amber-300 bg-transparent w-32 text-center" data-placeholder-ar="الشعبة" data-placeholder-en="Class" placeholder="الشعبة"></span>
+<span>📅 <span data-ar="التاريخ:" data-en="Date:">التاريخ:</span> <input type="text" id="examDate" class="border-b-2 border-green-300 bg-transparent w-32 text-center"></span>
+<span>😊 <span data-ar="الاسم:" data-en="Name:">الاسم:</span> <input type="text" id="studentName" class="border-b-2 border-green-300 bg-transparent w-40 text-center" data-placeholder-ar="اكتب اسمك" data-placeholder-en="Your name" placeholder="اكتب اسمك"></span>
+<span>🏫 <span data-ar="الشعبة:" data-en="Class:">الشعبة:</span> <input type="text" id="studentClass" class="border-b-2 border-green-300 bg-transparent w-32 text-center" data-placeholder-ar="الشعبة" data-placeholder-en="Class" placeholder="الشعبة"></span>
 <span>⏰ <span data-ar="المدة: 45 دقيقة" data-en="Duration: 45 min">المدة: 45 دقيقة</span></span>
 <span>📊 <span data-ar="المجموع: 100 درجة" data-en="Total: 100 points">المجموع: 100 درجة</span></span>
 </div>
 </header>
 
-<div class="max-w-5xl mx-auto mb-6 bg-white p-4 rounded-xl shadow-lg border-2 border-amber-200 no-print">
-<h3 class="font-bold text-lg mb-3 text-amber-800 text-center">🎯 <span data-ar="قاعدتا الجمع" data-en="The Two Addition Rules">قاعدتا الجمع</span></h3>
+<div class="max-w-5xl mx-auto mb-6 bg-white p-4 rounded-xl shadow-lg border-2 border-green-200 no-print">
+<h3 class="font-bold text-lg mb-3 text-green-800 text-center">🎯 <span data-ar="السؤال الأول دائماً: هل يوجد ناتج مشترك؟" data-en="Always Ask First: Is There a Common Outcome?">السؤال الأول دائماً: هل يوجد ناتج مشترك؟</span></h3>
 <div class="grid md:grid-cols-2 gap-3 text-sm">
-<div class="formula-box"><strong><span data-ar="منفصلان (لا تقاطع):" data-en="Exclusive:">منفصلان (لا تقاطع):</span></strong><br><span class="math-display">P(A∪B) = P(A) + P(B)</span></div>
-<div class="formula-box"><strong><span data-ar="غير منفصلين (تقاطع):" data-en="Non-exclusive:">غير منفصلين (تقاطع):</span></strong><br><span class="math-display">P(A∪B) = P(A) + P(B) - P(A∩B)</span></div>
+<div class="formula-box"><strong><span data-ar="لا مشترك ⇒ منفصلان:" data-en="No overlap ⇒ exclusive:">لا مشترك ⇒ منفصلان:</span></strong><br><span class="math-display">P(A∪B) = P(A) + P(B)</span></div>
+<div class="formula-box"><strong><span data-ar="مشترك ⇒ غير منفصلين:" data-en="Overlap ⇒ not exclusive:">مشترك ⇒ غير منفصلين:</span></strong><br><span class="math-display">P(A∪B) = P(A) + P(B) - P(A∩B)</span></div>
 </div>
 <div id="method-holder" class="mt-2"></div>
 </div>
@@ -98,19 +98,19 @@ body.en-mode .save-indicator { left: auto; right: 20px; }
 <main class="max-w-5xl mx-auto space-y-8" id="exam-content"></main>
 
 <div class="text-center no-print pb-8 mt-8">
-<button onclick="gradeExam()" class="bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-800 hover:to-orange-700 text-white text-lg px-12 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105">🎯 <span data-ar="صحح إجاباتي!" data-en="Grade My Exam!">صحح إجاباتي!</span></button>
+<button onclick="gradeExam()" class="bg-gradient-to-r from-green-700 to-emerald-600 hover:from-green-800 hover:to-emerald-700 text-white text-lg px-12 py-4 rounded-2xl font-bold shadow-xl transition transform hover:scale-105">🎯 <span data-ar="صحح إجاباتي!" data-en="Grade My Exam!">صحح إجاباتي!</span></button>
 </div>
 
-<div id="results-panel" class="max-w-5xl mx-auto mt-8 bg-white p-8 rounded-3xl shadow-2xl border-4 border-amber-600 hidden no-print">
+<div id="results-panel" class="max-w-5xl mx-auto mt-8 bg-white p-8 rounded-3xl shadow-2xl border-4 border-green-600 hidden no-print">
 <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">🏆 <span data-ar="نتيجتك يا بطل!" data-en="Your Result, Champion!">نتيجتك يا بطل!</span> 🏆</h2>
 <div class="grid md:grid-cols-3 gap-4 mb-6">
-<div class="bg-amber-50 p-4 rounded-xl text-center"><p>😊 <span data-ar="الاسم" data-en="Name">الاسم</span></p><p id="res-name" class="font-bold text-xl text-amber-700">-</p></div>
-<div class="bg-orange-50 p-4 rounded-xl text-center"><p>📅 <span data-ar="التاريخ" data-en="Date">التاريخ</span></p><p id="res-date" class="font-bold text-xl text-orange-700">-</p></div>
-<div class="bg-amber-50 p-4 rounded-xl text-center"><p>🌟 <span data-ar="المجموع" data-en="Total">المجموع</span></p><p id="res-total" class="font-bold text-3xl text-amber-700">0 / 100</p></div>
+<div class="bg-green-50 p-4 rounded-xl text-center"><p>😊 <span data-ar="الاسم" data-en="Name">الاسم</span></p><p id="res-name" class="font-bold text-xl text-green-700">-</p></div>
+<div class="bg-emerald-50 p-4 rounded-xl text-center"><p>📅 <span data-ar="التاريخ" data-en="Date">التاريخ</span></p><p id="res-date" class="font-bold text-xl text-emerald-700">-</p></div>
+<div class="bg-green-50 p-4 rounded-xl text-center"><p>🌟 <span data-ar="المجموع" data-en="Total">المجموع</span></p><p id="res-total" class="font-bold text-3xl text-green-700">0 / 100</p></div>
 </div>
 <div class="text-center mb-6">
 <span id="success-badge" class="success-badge grade-excellent">-</span>
-<p id="success-percent" class="text-4xl font-bold text-amber-700 mt-2">0%</p>
+<p id="success-percent" class="text-4xl font-bold text-green-700 mt-2">0%</p>
 <p class="text-sm text-gray-500"><span data-ar="نسبة النجاح" data-en="Success Rate">نسبة النجاح</span></p>
 </div>
 <div class="bg-gray-50 p-6 rounded-xl mb-6">
@@ -118,13 +118,13 @@ body.en-mode .save-indicator { left: auto; right: 20px; }
 <div class="space-y-3" id="sections-performance"></div>
 </div>
 <div class="text-center">
-<button id="sendEmailBtn" onclick="sendResultsToEmail()" class="bg-gradient-to-r from-amber-700 to-orange-600 text-white text-lg px-8 py-3 rounded-2xl font-bold shadow-xl transition">📧 <span data-ar="أرسل النتيجة للمعلم" data-en="Send Result to Teacher">أرسل النتيجة للمعلم</span></button>
+<button id="sendEmailBtn" onclick="sendResultsToEmail()" class="bg-gradient-to-r from-green-700 to-emerald-600 text-white text-lg px-8 py-3 rounded-2xl font-bold shadow-xl transition">📧 <span data-ar="أرسل النتيجة للمعلم" data-en="Send Result to Teacher">أرسل النتيجة للمعلم</span></button>
 <p id="emailStatus" class="text-sm mt-2 text-center font-medium"></p>
 </div>
 </div>
 
 <footer class="max-w-5xl mx-auto mt-10 mb-8 text-center text-gray-500 text-sm no-print">
-© Mutually Exclusive Events - Grade 11 General | Mr. Mohammed Hesham 🎯
+© Mutually Exclusive Events (V2) - Grade 11 General | Mr. Mohammed Hesham 🎯
 </footer>
 
 <script>
@@ -134,7 +134,7 @@ const TEMPLATE_ID = "template_5b0u2tq";
 const TARGET_EMAIL = "mohammedhesham872@gmail.com";
 emailjs.init(PUBLIC_KEY);
 
-const STORAGE_KEY = 'exclusive_events_g11_v1';
+const STORAGE_KEY = 'exclusive_events_v2_g11';
 const TOTAL_TIME = 2700;
 const TOTAL_QUESTIONS = 30;
 const TOTAL_SECTIONS = 6;
@@ -156,247 +156,271 @@ function setupInputListeners(){['studentName','studentClass','examDate'].forEach
 
 // ==================== SVG DIAGRAMS ====================
 const svgGraphs = {
-fig_rules: `<svg class="svg-graph" width="500" height="260" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
-<rect x="5" y="5" width="490" height="250" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
-<text x="250" y="26" text-anchor="middle" font-size="14" fill="#92400e" font-weight="bold">⚖️ منفصلان أم لا؟ انظر التقاطع!</text>
-<rect x="30" y="42" width="210" height="120" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
-<text x="135" y="62" text-anchor="middle" font-size="11" fill="#166534" font-weight="bold">منفصلان (متنافيان)</text>
-<circle cx="100" cy="105" r="32" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
-<circle cx="170" cy="105" r="32" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
-<text x="100" y="109" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">A</text>
-<text x="170" y="109" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">B</text>
-<text x="135" y="152" text-anchor="middle" font-size="10" fill="#166534" font-family="'Amiri',serif" font-weight="bold">P(A∪B) = P(A)+P(B)</text>
-<rect x="260" y="42" width="210" height="120" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
-<text x="365" y="62" text-anchor="middle" font-size="11" fill="#991b1b" font-weight="bold">غير منفصلين</text>
-<circle cx="335" cy="105" r="34" fill="#fecaca" fill-opacity="0.8" stroke="#dc2626" stroke-width="2"/>
-<circle cx="395" cy="105" r="34" fill="#fbcfe8" fill-opacity="0.7" stroke="#db2777" stroke-width="2"/>
-<text x="365" y="109" text-anchor="middle" font-size="9" fill="#7f1d1d" font-weight="bold">A∩B</text>
-<text x="365" y="152" text-anchor="middle" font-size="9.5" fill="#991b1b" font-family="'Amiri',serif" font-weight="bold">P(A∪B) = P(A)+P(B)-P(A∩B)</text>
-<rect x="30" y="175" width="440" height="34" rx="8" fill="#fff" stroke="#b45309" stroke-width="2"/>
-<text x="250" y="197" text-anchor="middle" font-size="10.5" fill="#92400e" font-weight="bold">💡 اسأل دائماً: هل يوجد ناتج يحقق الحدثين معاً؟</text>
-<rect x="30" y="218" width="440" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-<text x="250" y="238" text-anchor="middle" font-size="10" fill="#92400e">مثال: ملك أو 6 ⇒ لا بطاقة مشتركة | قلب أو ملك ⇒ آس القلب مشترك!</text>
+fig_decision: `<svg class="svg-graph" width="500" height="280" viewBox="0 0 500 280" xmlns="http://www.w3.org/2000/svg">
+<rect x="5" y="5" width="490" height="270" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+<text x="250" y="26" text-anchor="middle" font-size="14" fill="#166534" font-weight="bold">🧭 شجرة قرار: منفصلان أم لا؟</text>
+<rect x="160" y="40" width="180" height="36" rx="8" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+<text x="250" y="63" text-anchor="middle" font-size="11" fill="#166534" font-weight="bold">هل يوجد ناتج يحقق الحدثين معاً؟</text>
+<line x1="200" y1="76" x2="120" y2="102" stroke="#15803d" stroke-width="2"/>
+<line x1="300" y1="76" x2="380" y2="102" stroke="#15803d" stroke-width="2"/>
+<text x="140" y="92" font-size="10" fill="#dc2626" font-weight="bold">لا</text>
+<text x="352" y="92" font-size="10" fill="#dc2626" font-weight="bold">نعم</text>
+<rect x="40" y="104" width="170" height="80" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+<text x="125" y="126" text-anchor="middle" font-size="11" fill="#166534" font-weight="bold">منفصلان (متنافيان)</text>
+<text x="125" y="148" text-anchor="middle" font-size="11" fill="#166534" font-family="'Amiri',serif" font-weight="bold">P = P(A) + P(B)</text>
+<text x="125" y="170" text-anchor="middle" font-size="9" fill="#166534">مثال: ملك أو 6 ، صورة أو كتابة</text>
+<rect x="290" y="104" width="170" height="80" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+<text x="375" y="126" text-anchor="middle" font-size="11" fill="#991b1b" font-weight="bold">غير منفصلين</text>
+<text x="375" y="148" text-anchor="middle" font-size="10.5" fill="#991b1b" font-family="'Amiri',serif" font-weight="bold">P = P(A)+P(B)-P(A∩B)</text>
+<text x="375" y="170" text-anchor="middle" font-size="9" fill="#991b1b">مثال: قلب أو ملك (K♥ مشترك)</text>
+<rect x="40" y="196" width="420" height="60" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<text x="250" y="216" text-anchor="middle" font-size="10.5" fill="#92400e" font-weight="bold">💡 ابحث عن المشترك لفظياً: بطاقة تكون ملكاً و6؟ مستحيل ⇒ منفصلان</text>
+<text x="250" y="234" text-anchor="middle" font-size="10.5" fill="#92400e" font-weight="bold">بطاقة تكون قلباً وملكاً؟ ممكن (ملك القلوب) ⇒ غير منفصلين ⇒ اطرح التقاطع</text>
+<text x="250" y="250" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">⚠️ نسيان الطرح = عدّ المشترك مرتين = احتمال أكبر من الصحيح</text>
 </svg>`,
 
-fig_kings: `<svg class="svg-graph" width="500" height="230" viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg">
+fig_kings6: `<svg class="svg-graph" width="500" height="230" viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg">
 <rect x="5" y="5" width="490" height="220" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-<text x="250" y="26" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="bold">🃏 تمرين 8: ملك أو 6 — لا بطاقة مشتركة</text>
-<g font-size="15" font-weight="bold" text-anchor="middle">
-<rect x="60" y="45" width="45" height="62" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="82" y="82" fill="#1e3a8a">K♠</text>
-<rect x="112" y="45" width="45" height="62" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="134" y="82" fill="#1e3a8a">K♥</text>
-<rect x="164" y="45" width="45" height="62" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="186" y="82" fill="#1e3a8a">K♦</text>
-<rect x="216" y="45" width="45" height="62" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="238" y="82" fill="#1e3a8a">K♣</text>
-<rect x="290" y="45" width="45" height="62" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="312" y="82" fill="#166534">6♠</text>
-<rect x="342" y="45" width="45" height="62" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="364" y="82" fill="#166534">6♥</text>
-<rect x="394" y="45" width="45" height="62" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="416" y="82" fill="#166534">6♦</text>
-<rect x="446" y="45" width="0" height="0" fill="none"/>
+<text x="250" y="26" text-anchor="middle" font-size="13" fill="#1e40af" font-weight="bold">🃏 تمرين 8: ملك أو 6 — مجموعتان متباعدتان</text>
+<g font-size="14" font-weight="bold" text-anchor="middle">
+<rect x="50" y="45" width="44" height="60" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="72" y="80" fill="#1e3a8a">K♠</text>
+<rect x="100" y="45" width="44" height="60" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="122" y="80" fill="#1e3a8a">K♥</text>
+<rect x="150" y="45" width="44" height="60" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="172" y="80" fill="#1e3a8a">K♦</text>
+<rect x="200" y="45" width="44" height="60" rx="6" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/><text x="222" y="80" fill="#1e3a8a">K♣</text>
+<rect x="270" y="45" width="44" height="60" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="292" y="80" fill="#166534">6♠</text>
+<rect x="320" y="45" width="44" height="60" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="342" y="80" fill="#166534">6♥</text>
+<rect x="370" y="45" width="44" height="60" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="392" y="80" fill="#166534">6♦</text>
+<rect x="420" y="45" width="44" height="60" rx="6" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="442" y="80" fill="#166534">6♣</text>
 </g>
-<text x="452" y="82" font-size="14" fill="#166534" font-weight="bold">6♣</text>
-<rect x="60" y="120" width="380" height="44" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
-<text x="250" y="138" text-anchor="middle" font-size="11.5" fill="#1e40af" font-family="'Amiri',serif" font-weight="bold">P = 4/52 + 4/52 = 8/52 = 2/13</text>
-<text x="250" y="156" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">منفصلان ✓ (لا بطاقة تكون ملكاً و 6 معاً)</text>
-<rect x="60" y="174" width="380" height="40" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-<text x="250" y="191" text-anchor="middle" font-size="10" fill="#92400e" font-weight="bold">الإجابة الصحيحة: C) منفصلان ، 2/13</text>
-<text x="250" y="207" text-anchor="middle" font-size="9.5" fill="#dc2626">فخ B: 1/169 ناتج ضرب وليس جمع!</text>
+<text x="250" y="80" text-anchor="middle" font-size="16" fill="#dc2626" font-weight="bold">∅</text>
+<rect x="50" y="120" width="414" height="44" rx="8" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+<text x="257" y="138" text-anchor="middle" font-size="12" fill="#1e40af" font-family="'Amiri',serif" font-weight="bold">P = 4/52 + 4/52 = 8/52 = 2/13</text>
+<text x="257" y="156" text-anchor="middle" font-size="10" fill="#166534" font-weight="bold">منفصلان ✓ — الإجابة C</text>
+<rect x="50" y="174" width="414" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text x="257" y="191" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">فخ الخيار B: 1/169 = (1/13)×(1/13) وهذا ضرب لحدثين مستقلين لا جمع!</text>
+<text x="257" y="207" text-anchor="middle" font-size="9.5" fill="#991b1b">وفخ D: 7/52 ينسى أن الستات أربع بطاقات</text>
 </svg>`,
 
-fig_hearts: `<svg class="svg-graph" width="500" height="240" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
-<rect x="5" y="5" width="490" height="230" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
-<text x="250" y="26" text-anchor="middle" font-size="13" fill="#9f1239" font-weight="bold">♥️ تمرين 12: قلب أو ملك — تقاطع واحد</text>
-<circle cx="190" cy="115" r="62" fill="#fbcfe8" fill-opacity="0.7" stroke="#db2777" stroke-width="2.5"/>
-<text x="160" y="80" font-size="11" fill="#9f1239" font-weight="bold">قلوب 13</text>
-<circle cx="290" cy="115" r="52" fill="#bfdbfe" fill-opacity="0.7" stroke="#2563eb" stroke-width="2.5"/>
-<text x="320" y="85" font-size="11" fill="#1e40af" font-weight="bold">ملوك 4</text>
-<text x="240" y="120" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">K♥</text>
-<text x="240" y="134" text-anchor="middle" font-size="8.5" fill="#dc2626">1/52</text>
-<rect x="60" y="185" width="380" height="44" rx="8" fill="#fff" stroke="#ec4899" stroke-width="2"/>
-<text x="250" y="203" text-anchor="middle" font-size="11.5" fill="#9f1239" font-family="'Amiri',serif" font-weight="bold">P = 13/52 + 4/52 - 1/52 = 16/52 = 4/13</text>
-<text x="250" y="221" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">غير منفصلين ✓ (نطرح التقاطع مرة واحدة) — الإجابة D</text>
-</svg>`,
-
-fig_dice36: `<svg class="svg-graph" width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-<rect x="5" y="5" width="490" height="290" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
-<text x="250" y="26" text-anchor="middle" font-size="13" fill="#065f46" font-weight="bold">🎲 تمرين 9: مزدوج أو مجموع 8 — المشترك (4,4)</text>
-<g stroke="#a7f3d0" stroke-width="1">
-<rect x="80" y="45" width="52" height="36" fill="#f0fdf4"/><rect x="132" y="45" width="52" height="36" fill="#f0fdf4"/><rect x="184" y="45" width="52" height="36" fill="#f0fdf4"/><rect x="236" y="45" width="52" height="36" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><rect x="288" y="45" width="52" height="36" fill="#f0fdf4"/><rect x="340" y="45" width="52" height="36" fill="#f0fdf4"/>
-<rect x="80" y="81" width="52" height="36" fill="#f0fdf4"/><rect x="132" y="81" width="52" height="36" fill="#f0fdf4"/><rect x="184" y="81" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="236" y="81" width="52" height="36" fill="#f0fdf4"/><rect x="288" y="81" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="340" y="81" width="52" height="36" fill="#f0fdf4"/>
-<rect x="80" y="117" width="52" height="36" fill="#f0fdf4"/><rect x="132" y="117" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="184" y="117" width="52" height="36" fill="#f0fdf4"/><rect x="236" y="117" width="52" height="36" fill="#f0fdf4"/><rect x="288" y="117" width="52" height="36" fill="#f0fdf4"/><rect x="340" y="117" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
-<rect x="80" y="153" width="52" height="36" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.5"/><rect x="132" y="153" width="52" height="36" fill="#f0fdf4"/><rect x="184" y="153" width="52" height="36" fill="#f0fdf4"/><rect x="236" y="153" width="52" height="36" fill="#f0fdf4"/><rect x="288" y="153" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="340" y="153" width="52" height="36" fill="#f0fdf4"/>
-<rect x="80" y="189" width="52" height="36" fill="#f0fdf4"/><rect x="132" y="189" width="52" height="36" fill="#f0fdf4"/><rect x="184" y="189" width="52" height="36" fill="#f0fdf4"/><rect x="236" y="189" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="288" y="189" width="52" height="36" fill="#f0fdf4"/><rect x="340" y="189" width="52" height="36" fill="#f0fdf4"/>
-<rect x="80" y="225" width="52" height="36" fill="#f0fdf4"/><rect x="132" y="225" width="52" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="184" y="225" width="52" height="36" fill="#f0fdf4"/><rect x="236" y="225" width="52" height="36" fill="#f0fdf4"/><rect x="288" y="225" width="52" height="36" fill="#f0fdf4"/><rect x="340" y="225" width="52" height="36" fill="#f0fdf4"/>
+fig_dice_grid: `<svg class="svg-graph" width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+<rect x="5" y="5" width="490" height="290" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+<text x="250" y="26" text-anchor="middle" font-size="13" fill="#9f1239" font-weight="bold">🎲 تمرين 9: مزدوج (أخضر) أو مجموع 8 (أزرق) — المشترك (4,4)</text>
+<g stroke="#fbcfe8" stroke-width="1">
+<rect x="80" y="45" width="50" height="36" fill="#fdf2f8"/><rect x="130" y="45" width="50" height="36" fill="#fdf2f8"/><rect x="180" y="45" width="50" height="36" fill="#fdf2f8"/><rect x="230" y="45" width="50" height="36" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><rect x="280" y="45" width="50" height="36" fill="#fdf2f8"/><rect x="330" y="45" width="50" height="36" fill="#fdf2f8"/>
+<rect x="80" y="81" width="50" height="36" fill="#fdf2f8"/><rect x="130" y="81" width="50" height="36" fill="#fdf2f8"/><rect x="180" y="81" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="230" y="81" width="50" height="36" fill="#fdf2f8"/><rect x="280" y="81" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="330" y="81" width="50" height="36" fill="#fdf2f8"/>
+<rect x="80" y="117" width="50" height="36" fill="#fdf2f8"/><rect x="130" y="117" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="180" y="117" width="50" height="36" fill="#fdf2f8"/><rect x="230" y="117" width="50" height="36" fill="#fdf2f8"/><rect x="280" y="117" width="50" height="36" fill="#fdf2f8"/><rect x="330" y="117" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+<rect x="80" y="153" width="50" height="36" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.5"/><rect x="130" y="153" width="50" height="36" fill="#fdf2f8"/><rect x="180" y="153" width="50" height="36" fill="#fdf2f8"/><rect x="230" y="153" width="50" height="36" fill="#fdf2f8"/><rect x="280" y="153" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="330" y="153" width="50" height="36" fill="#fdf2f8"/>
+<rect x="80" y="189" width="50" height="36" fill="#fdf2f8"/><rect x="130" y="189" width="50" height="36" fill="#fdf2f8"/><rect x="180" y="189" width="50" height="36" fill="#fdf2f8"/><rect x="230" y="189" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="280" y="189" width="50" height="36" fill="#fdf2f8"/><rect x="330" y="189" width="50" height="36" fill="#fdf2f8"/>
+<rect x="80" y="225" width="50" height="36" fill="#fdf2f8"/><rect x="130" y="225" width="50" height="36" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><rect x="180" y="225" width="50" height="36" fill="#fdf2f8"/><rect x="230" y="225" width="50" height="36" fill="#fdf2f8"/><rect x="280" y="225" width="50" height="36" fill="#fdf2f8"/><rect x="330" y="225" width="50" height="36" fill="#fdf2f8"/>
 </g>
-<g font-size="9" text-anchor="middle" fill="#374151" font-family="'Amiri',serif">
-<text x="262" y="67">(4,4)✓</text><text x="106" y="175">(1,1)</text><text x="366" y="139">(3,5)</text>
-</g>
-<rect x="405" y="45" width="80" height="100" rx="8" fill="#fff" stroke="#10b981" stroke-width="2"/>
-<text x="445" y="65" text-anchor="middle" font-size="9.5" fill="#166534" font-weight="bold">أخضر: مزدوج 6</text>
-<text x="445" y="83" text-anchor="middle" font-size="9.5" fill="#1e40af" font-weight="bold">أزرق: مجموع 8</text>
-<text x="445" y="101" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">(4,4) مشترك</text>
-<text x="445" y="125" text-anchor="middle" font-size="10" fill="#065f46" font-family="'Amiri',serif" font-weight="bold">⇒ غير منفصلين</text>
-<rect x="80" y="268" width="340" height="0" rx="0" fill="none"/>
-<text x="250" y="282" text-anchor="middle" font-size="11.5" fill="#065f46" font-family="'Amiri',serif" font-weight="bold">P = 6/36 + 5/36 - 1/36 = 10/36 = 5/18 ✓ B</text>
+<circle cx="255" cy="63" r="7" fill="#dc2626"/>
+<text x="255" y="67" text-anchor="middle" font-size="8" fill="#fff" font-weight="bold">!</text>
+<rect x="395" y="45" width="90" height="110" rx="8" fill="#fff" stroke="#ec4899" stroke-width="2"/>
+<text x="440" y="66" text-anchor="middle" font-size="9.5" fill="#166534" font-weight="bold">مزدوج: 6</text>
+<text x="440" y="86" text-anchor="middle" font-size="9.5" fill="#1e40af" font-weight="bold">مجموع 8: 5</text>
+<text x="440" y="106" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">مشترك: 1</text>
+<text x="440" y="130" text-anchor="middle" font-size="10" fill="#9f1239" font-family="'Amiri',serif" font-weight="bold">(4,4)</text>
+<rect x="80" y="268" width="300" height="0" rx="0" fill="none"/>
+<text x="230" y="282" text-anchor="middle" font-size="11.5" fill="#9f1239" font-family="'Amiri',serif" font-weight="bold">P = 6/36 + 5/36 - 1/36 = 10/36 = 5/18 ✓ B</text>
 </svg>`,
 
 fig_venn20: `<svg class="svg-graph" width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
 <rect x="5" y="5" width="490" height="240" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
 <text x="250" y="26" text-anchor="middle" font-size="13" fill="#5b21b6" font-weight="bold">🔢 تمرين 10: أعداد 1-20 (زوجي أو يقبل القسمة على 3)</text>
-<rect x="40" y="42" width="420" height="140" rx="10" fill="#fff" stroke="#5b21b6" stroke-width="2"/>
-<circle cx="190" cy="112" r="60" fill="#ddd6fe" fill-opacity="0.7" stroke="#7c3aed" stroke-width="2.5"/>
-<text x="150" y="80" font-size="11" fill="#5b21b6" font-weight="bold">زوجي 10</text>
-<circle cx="280" cy="112" r="50" fill="#fbcfe8" fill-opacity="0.6" stroke="#db2777" stroke-width="2.5"/>
-<text x="310" y="80" font-size="11" fill="#9f1239" font-weight="bold">÷3 : 6</text>
-<text x="235" y="116" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">6,12,18</text>
-<text x="235" y="130" text-anchor="middle" font-size="9" fill="#dc2626">(3 مشتركة)</text>
-<rect x="40" y="192" width="420" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<rect x="45" y="42" width="410" height="140" rx="10" fill="#fff" stroke="#5b21b6" stroke-width="2"/>
+<text x="62" y="60" font-size="10" fill="#5b21b6" font-weight="bold">S (20)</text>
+<circle cx="190" cy="112" r="58" fill="#ddd6fe" fill-opacity="0.75" stroke="#7c3aed" stroke-width="2.5"/>
+<text x="150" y="82" font-size="10.5" fill="#5b21b6" font-weight="bold">زوجي 10</text>
+<circle cx="275" cy="112" r="48" fill="#fbcfe8" fill-opacity="0.65" stroke="#db2777" stroke-width="2.5"/>
+<text x="305" y="82" font-size="10.5" fill="#9f1239" font-weight="bold">÷3 : 6</text>
+<text x="232" y="110" text-anchor="middle" font-size="9" fill="#dc2626" font-weight="bold">6,12,18</text>
+<text x="232" y="124" text-anchor="middle" font-size="9" fill="#dc2626">(3 مشتركة)</text>
+<text x="150" y="120" text-anchor="middle" font-size="9" fill="#5b21b6">7 فقط</text>
+<text x="310" y="120" text-anchor="middle" font-size="9" fill="#9f1239">3 فقط</text>
+<text x="410" y="170" text-anchor="middle" font-size="9" fill="#6b7280">خارجها: 0</text>
+<rect x="45" y="192" width="410" height="42" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
 <text x="250" y="210" text-anchor="middle" font-size="11.5" fill="#92400e" font-family="'Amiri',serif" font-weight="bold">P = 10/20 + 6/20 - 3/20 = 13/20</text>
 <text x="250" y="227" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">غير منفصلين ✓ — الإجابة D</text>
 </svg>`,
 
 fig_coin: `<svg class="svg-graph" width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
 <rect x="5" y="5" width="490" height="210" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-<text x="250" y="26" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">🪙 تمرين 11: صورة أو كتابة — منفصلان تماماً</text>
-<circle cx="160" cy="105" r="45" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.5"/>
-<text x="160" y="100" text-anchor="middle" font-size="12" fill="#166534" font-weight="bold">صورة</text>
-<text x="160" y="120" text-anchor="middle" font-size="11" fill="#166534" font-family="'Amiri',serif">1/2</text>
-<circle cx="340" cy="105" r="45" fill="#bfdbfe" stroke="#2563eb" stroke-width="2.5"/>
-<text x="340" y="100" text-anchor="middle" font-size="12" fill="#1e40af" font-weight="bold">كتابة</text>
-<text x="340" y="120" text-anchor="middle" font-size="11" fill="#1e40af" font-family="'Amiri',serif">1/2</text>
-<text x="250" y="105" text-anchor="middle" font-size="16" fill="#dc2626" font-weight="bold">∅</text>
-<text x="250" y="125" text-anchor="middle" font-size="9" fill="#dc2626">لا تقاطع</text>
+<text x="250" y="26" text-anchor="middle" font-size="13" fill="#991b1b" font-weight="bold">🪙 تمرين 11: صورة أو كتابة — حدثان متنافيان تماماً</text>
+<circle cx="165" cy="105" r="46" fill="#bbf7d0" stroke="#16a34a" stroke-width="2.5"/>
+<text x="165" y="100" text-anchor="middle" font-size="12" fill="#166534" font-weight="bold">صورة</text>
+<text x="165" y="120" text-anchor="middle" font-size="11" fill="#166534" font-family="'Amiri',serif">1/2</text>
+<circle cx="335" cy="105" r="46" fill="#bfdbfe" stroke="#2563eb" stroke-width="2.5"/>
+<text x="335" y="100" text-anchor="middle" font-size="12" fill="#1e40af" font-weight="bold">كتابة</text>
+<text x="335" y="120" text-anchor="middle" font-size="11" fill="#1e40af" font-family="'Amiri',serif">1/2</text>
+<text x="250" y="100" text-anchor="middle" font-size="15" fill="#dc2626" font-weight="bold">∅</text>
+<text x="250" y="118" text-anchor="middle" font-size="9" fill="#dc2626">لا تقاطع</text>
 <rect x="60" y="165" width="380" height="40" rx="8" fill="#fff" stroke="#dc2626" stroke-width="2"/>
 <text x="250" y="182" text-anchor="middle" font-size="11.5" fill="#991b1b" font-family="'Amiri',serif" font-weight="bold">P = 1/2 + 1/2 = 1 (حدث أكيد)</text>
 <text x="250" y="199" text-anchor="middle" font-size="9.5" fill="#166534" font-weight="bold">منفصلان ✓ — الإجابة A</text>
 </svg>`,
 
-fig_class: `<svg class="svg-graph" width="500" height="240" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+fig_hearts: `<svg class="svg-graph" width="500" height="240" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
+<rect x="5" y="5" width="490" height="230" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<text x="250" y="26" text-anchor="middle" font-size="13" fill="#92400e" font-weight="bold">♥️ تمرين 12: قلب أو ملك — تقاطع واحد (K♥)</text>
+<circle cx="195" cy="115" r="60" fill="#fda4af" fill-opacity="0.55" stroke="#be123c" stroke-width="2.5"/>
+<text x="155" y="85" font-size="11" fill="#881337" font-weight="bold">قلوب 13</text>
+<circle cx="285" cy="115" r="48" fill="#bfdbfe" fill-opacity="0.6" stroke="#1d4ed8" stroke-width="2.5"/>
+<text x="315" y="85" font-size="11" fill="#1e40af" font-weight="bold">ملوك 4</text>
+<text x="238" y="112" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="bold">K♥</text>
+<text x="238" y="128" text-anchor="middle" font-size="9" fill="#dc2626">1/52</text>
+<rect x="60" y="185" width="380" height="44" rx="8" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+<text x="250" y="203" text-anchor="middle" font-size="11.5" fill="#92400e" font-family="'Amiri',serif" font-weight="bold">P = 4/52 + 13/52 - 1/52 = 16/52 = 4/13</text>
+<text x="250" y="221" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">غير منفصلين ✓ — الإجابة D</text>
+</svg>`,
+
+fig_class40: `<svg class="svg-graph" width="500" height="240" viewBox="0 0 500 240" xmlns="http://www.w3.org/2000/svg">
 <rect x="5" y="5" width="490" height="230" rx="12" fill="#cffafe" stroke="#0891b2" stroke-width="2"/>
-<text x="250" y="26" text-anchor="middle" font-size="13" fill="#155e75" font-weight="bold">🏫 تطبيق: 30 طالباً (كرة 12، سلة 8، كلاهما 4)</text>
-<rect x="40" y="42" width="420" height="130" rx="10" fill="#fff" stroke="#155e75" stroke-width="2"/>
-<circle cx="190" cy="107" r="52" fill="#a5f3fc" fill-opacity="0.7" stroke="#0891b2" stroke-width="2.5"/>
-<text x="160" y="80" font-size="10.5" fill="#155e75" font-weight="bold">كرة 12</text>
-<circle cx="270" cy="107" r="45" fill="#fde68a" fill-opacity="0.7" stroke="#d97706" stroke-width="2.5"/>
-<text x="300" y="80" font-size="10.5" fill="#92400e" font-weight="bold">سلة 8</text>
-<text x="230" y="111" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">4</text>
-<text x="150" y="115" text-anchor="middle" font-size="9.5" fill="#155e75">8 فقط كرة</text>
-<text x="305" y="115" text-anchor="middle" font-size="9.5" fill="#92400e">4 فقط سلة</text>
-<text x="400" y="160" text-anchor="middle" font-size="9.5" fill="#6b7280">لا شيء 14</text>
-<rect x="40" y="182" width="420" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-<text x="250" y="200" text-anchor="middle" font-size="11.5" fill="#92400e" font-family="'Amiri',serif" font-weight="bold">P(كرة أو سلة) = (12+8-4)/30 = 16/30 = 8/15</text>
-<text x="250" y="218" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">غير منفصلين (4 يلعبون الاثنين)</text>
+<text x="250" y="26" text-anchor="middle" font-size="13" fill="#155e75" font-weight="bold">🏫 صف من 40: رياضيات 15 ، علوم 10 ، كلاهما 5</text>
+<rect x="45" y="42" width="410" height="130" rx="10" fill="#fff" stroke="#155e75" stroke-width="2"/>
+<text x="62" y="60" font-size="10" fill="#155e75" font-weight="bold">S (40)</text>
+<circle cx="190" cy="108" r="55" fill="#a5f3fc" fill-opacity="0.7" stroke="#0891b2" stroke-width="2.5"/>
+<text x="152" y="80" font-size="10.5" fill="#155e75" font-weight="bold">رياضيات 15</text>
+<circle cx="270" cy="108" r="45" fill="#fde68a" fill-opacity="0.7" stroke="#d97706" stroke-width="2.5"/>
+<text x="300" y="80" font-size="10.5" fill="#92400e" font-weight="bold">علوم 10</text>
+<text x="230" y="112" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">5</text>
+<text x="160" y="118" text-anchor="middle" font-size="9" fill="#155e75">10 فقط</text>
+<text x="300" y="118" text-anchor="middle" font-size="9" fill="#92400e">5 فقط</text>
+<text x="400" y="160" text-anchor="middle" font-size="9.5" fill="#6b7280">لا شيء 20</text>
+<rect x="45" y="182" width="410" height="44" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<text x="250" y="200" text-anchor="middle" font-size="11.5" fill="#92400e" font-family="'Amiri',serif" font-weight="bold">P(رياضيات أو علوم) = (15+10-5)/40 = 20/40 = 1/2</text>
+<text x="250" y="218" text-anchor="middle" font-size="10" fill="#991b1b" font-weight="bold">غير منفصلين (5 متفوقين في المادتين)</text>
+</svg>`,
+
+fig_rules2: `<svg class="svg-graph" width="500" height="230" viewBox="0 0 500 230" xmlns="http://www.w3.org/2000/svg">
+<rect x="5" y="5" width="490" height="220" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+<text x="250" y="26" text-anchor="middle" font-size="13" fill="#065f46" font-weight="bold">📚 قاعدة الجمع بشكليها</text>
+<rect x="35" y="42" width="200" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+<text x="135" y="64" text-anchor="middle" font-size="11" fill="#166534" font-weight="bold">منفصلان</text>
+<text x="135" y="88" text-anchor="middle" font-size="13" fill="#166534" font-family="'Amiri',serif" font-weight="bold">P(A∪B)=P(A)+P(B)</text>
+<text x="135" y="112" text-anchor="middle" font-size="9" fill="#166534">لأن P(A∩B) = 0</text>
+<rect x="265" y="42" width="200" height="90" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+<text x="365" y="64" text-anchor="middle" font-size="11" fill="#991b1b" font-weight="bold">غير منفصلين</text>
+<text x="365" y="86" text-anchor="middle" font-size="11.5" fill="#991b1b" font-family="'Amiri',serif" font-weight="bold">P(A∪B)=P(A)+P(B)</text>
+<text x="365" y="104" text-anchor="middle" font-size="11.5" fill="#991b1b" font-family="'Amiri',serif" font-weight="bold">- P(A∩B)</text>
+<text x="365" y="122" text-anchor="middle" font-size="9" fill="#991b1b">نطرح المشترك مرة واحدة</text>
+<rect x="35" y="145" width="430" height="70" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+<text x="250" y="167" text-anchor="middle" font-size="10.5" fill="#92400e" font-weight="bold">لماذا نطرح؟ العناصر المشتركة تُحسب مرتين عند جمع P(A) و P(B)</text>
+<text x="250" y="186" text-anchor="middle" font-size="10" fill="#92400e" font-family="'Amiri',serif">مثال: 10 + 6 = 16 لكن العناصر الفعلية 13 فقط ⇒ طرحنا 3</text>
+<text x="250" y="205" text-anchor="middle" font-size="9.5" fill="#dc2626" font-weight="bold">بدون الطرح يصبح الاحتمال أكبر من الحقيقي (وقد يتجاوز 1!)</text>
 </svg>`
 };
 
 // ==================== EXAM DATA ====================
 const originalExamData = {
 sections: [
-{ id:'s1', title:{ar:'🔹 القسم 1: أوراق اللعب والعملة (مثل 8، 11، 12) (Q1-Q5)',en:'🔹 Section 1: Cards & Coin (like 8, 11, 12) (Q1-Q5)'}, questions:[
-{ q:{ar:'<strong>السؤال 1 (تمرين 8):</strong> سحب بطاقة من 52: الحدثان «ملك» و«6». حدد الانفصال ثم الاحتمال.',en:'<strong>Q1 (Ex.8):</strong> Draw a card: events "king" and "6". Exclusive? Probability?'},
-  svg: svgGraphs.fig_kings,
+{ id:'s1', title:{ar:'🔹 القسم 1: المسائل الأصلية (8 - 12) (Q1-Q5)',en:'🔹 Section 1: Original Problems (8-12) (Q1-Q5)'}, questions:[
+{ q:{ar:'<strong>السؤال 1 (تمرين 8):</strong> حدد ما إذا كان الحدثان منفصلين أم غير منفصلين، ثم جد الاحتمال: سحب بطاقة من مجموعة أوراق اللعب (52 بطاقة) والحصول على ملك أو ستة.',en:'<strong>Q1 (Ex.8):</strong> Exclusive or not? Draw a card from 52: a king or a six.'},
+  svg: svgGraphs.fig_kings6,
   options:[{ar:'غير منفصلين ، <span class="math-display">2/13</span>',en:'Not exclusive, <span class="math-display">2/13</span>'},{ar:'منفصلان ، <span class="math-display">1/169</span>',en:'Exclusive, <span class="math-display">1/169</span>'},{ar:'منفصلان ، <span class="math-display">2/13</span>',en:'Exclusive, <span class="math-display">2/13</span>'},{ar:'غير منفصلين ، <span class="math-display">7/52</span>',en:'Not exclusive, <span class="math-display">7/52</span>'}],
-  correct:2, answer:{ar:'لا بطاقة مشتركة ⇒ منفصلان ؛ P = 4/52 + 4/52 = 2/13',en:'Exclusive; P = 2/13'} },
-{ q:{ar:'<strong>السؤال 2 (تمرين 11):</strong> إلقاء قطعة نقد: «صورة» و«كتابة». حدد الانفصال ثم الاحتمال.',en:'<strong>Q2 (Ex.11):</strong> Coin toss: "heads" and "tails". Exclusive? Probability?'},
-  svg: svgGraphs.fig_coin,
-  options:[{ar:'غير منفصلين ، <span class="math-display">1/2</span>',en:'Not exclusive, <span class="math-display">1/2</span>'},{ar:'منفصلان ، <span class="math-display">1</span>',en:'Exclusive, <span class="math-display">1</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'}],
-  correct:1, answer:{ar:'لا يمكن حدوثهما معاً ⇒ منفصلان ؛ P = 1/2 + 1/2 = 1',en:'Exclusive; P = 1'} },
-{ q:{ar:'<strong>السؤال 3 (تمرين 12):</strong> سحب بطاقة: «قلب» و«ملك». حدد الانفصال ثم الاحتمال.',en:'<strong>Q3 (Ex.12):</strong> Draw a card: "heart" and "king". Exclusive? Probability?'},
-  svg: svgGraphs.fig_hearts,
-  options:[{ar:'منفصلان ، <span class="math-display">17/52</span>',en:'Exclusive, <span class="math-display">17/52</span>'},{ar:'غير منفصلين ، <span class="math-display">17/52</span>',en:'Not exclusive, <span class="math-display">17/52</span>'},{ar:'منفصلان ، <span class="math-display">4/13</span>',en:'Exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">4/13</span>',en:'Not exclusive, <span class="math-display">4/13</span>'}],
-  correct:3, answer:{ar:'ملك القلوب مشترك ⇒ غير منفصلين ؛ P = 4/52 + 13/52 - 1/52 = 4/13',en:'Not exclusive; 4/13'} },
-{ q:{ar:'<strong>السؤال 4:</strong> سحب بطاقة: «ملكة» و«دايموند (معيّن)». حدد الانفصال ثم الاحتمال.',en:'<strong>Q4:</strong> Draw a card: "queen" and "diamond". Exclusive? Probability?'},
-  options:[{ar:'منفصلان ، <span class="math-display">4/13</span>',en:'Exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">4/13</span>',en:'Not exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">17/52</span>',en:'Not exclusive, <span class="math-display">17/52</span>'},{ar:'منفصلان ، <span class="math-display">17/52</span>',en:'Exclusive, <span class="math-display">17/52</span>'}],
-  correct:1, answer:{ar:'ملكة الدايموند مشتركة ⇒ غير منفصلين ؛ P = 4/52 + 13/52 - 1/52 = 4/13',en:'Not exclusive; 4/13'} },
-{ q:{ar:'<strong>السؤال 5:</strong> سحب بطاقة: «حمراء» و«سوداء». حدد الانفصال ثم الاحتمال.',en:'<strong>Q5:</strong> Draw a card: "red" and "black". Exclusive? Probability?'},
-  options:[{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'},{ar:'منفصلان ، <span class="math-display">1</span>',en:'Exclusive, <span class="math-display">1</span>'},{ar:'غير منفصلين ، <span class="math-display">1/2</span>',en:'Not exclusive, <span class="math-display">1/2</span>'}],
-  correct:2, answer:{ar:'لا بطاقة حمراء وسوداء معاً ⇒ منفصلان ؛ P = 26/52 + 26/52 = 1',en:'Exclusive; P = 1'} }
-]},
-{ id:'s2', title:{ar:'🔹 القسم 2: أحداث المكعبين (مثل 9) (Q6-Q10)',en:'🔹 Section 2: Two-Dice Events (like 9) (Q6-Q10)'}, questions:[
-{ q:{ar:'<strong>السؤال 6 (تمرين 9):</strong> رمي مكعبين: «مزدوج (عددان متطابقان)» و«مجموع 8». حدد الانفصال ثم الاحتمال.',en:'<strong>Q6 (Ex.9):</strong> Two dice: "doubles" and "sum 8". Exclusive? Probability?'},
-  svg: svgGraphs.fig_dice36,
+  correct:2, answer:{ar:'لا بطاقة تكون ملكاً وستة معاً ⇒ منفصلان ؛ P = 4/52 + 4/52 = 2/13',en:'Exclusive; P = 2/13'} },
+{ q:{ar:'<strong>السؤال 2 (تمرين 9):</strong> حدد الانفصال ثم الاحتمال: رمي مكعبين والحصول على عددين متطابقين أو مجموعهما 8.',en:'<strong>Q2 (Ex.9):</strong> Exclusive or not? Two dice: doubles or a sum of 8.'},
+  svg: svgGraphs.fig_dice_grid,
   options:[{ar:'منفصلان ، <span class="math-display">11/36</span>',en:'Exclusive, <span class="math-display">11/36</span>'},{ar:'غير منفصلين ، <span class="math-display">5/18</span>',en:'Not exclusive, <span class="math-display">5/18</span>'},{ar:'غير منفصلين ، <span class="math-display">11/36</span>',en:'Not exclusive, <span class="math-display">11/36</span>'},{ar:'منفصلان ، <span class="math-display">1/36</span>',en:'Exclusive, <span class="math-display">1/36</span>'}],
   correct:1, answer:{ar:'(4,4) مشترك ⇒ غير منفصلين ؛ P = 6/36 + 5/36 - 1/36 = 5/18',en:'Not exclusive; 5/18'} },
-{ q:{ar:'<strong>السؤال 7:</strong> رمي مكعبين: «مجموع 7» و«مجموع 11». حدد الانفصال ثم الاحتمال.',en:'<strong>Q7:</strong> Two dice: "sum 7" and "sum 11". Exclusive? Probability?'},
-  options:[{ar:'غير منفصلين ، <span class="math-display">2/9</span>',en:'Not exclusive, <span class="math-display">2/9</span>'},{ar:'منفصلان ، <span class="math-display">2/9</span>',en:'Exclusive, <span class="math-display">2/9</span>'},{ar:'منفصلان ، <span class="math-display">1/9</span>',en:'Exclusive, <span class="math-display">1/9</span>'},{ar:'غير منفصلين ، <span class="math-display">1/3</span>',en:'Not exclusive, <span class="math-display">1/3</span>'}],
-  correct:1, answer:{ar:'لا يمكن مجموعان مختلفان معاً ⇒ منفصلان ؛ P = 6/36 + 2/36 = 8/36 = 2/9',en:'Exclusive; 2/9'} },
-{ q:{ar:'<strong>السؤال 8:</strong> رمي مكعبين: «مزدوج» و«مجموع 7». حدد الانفصال ثم الاحتمال.',en:'<strong>Q8:</strong> Two dice: "doubles" and "sum 7". Exclusive? Probability?'},
-  options:[{ar:'منفصلان ، <span class="math-display">1/6</span>',en:'Exclusive, <span class="math-display">1/6</span>'},{ar:'غير منفصلين ، <span class="math-display">1/3</span>',en:'Not exclusive, <span class="math-display">1/3</span>'},{ar:'منفصلان ، <span class="math-display">1/3</span>',en:'Exclusive, <span class="math-display">1/3</span>'},{ar:'غير منفصلين ، <span class="math-display">11/36</span>',en:'Not exclusive, <span class="math-display">11/36</span>'}],
-  correct:2, answer:{ar:'مجموع المزدوج زوجي دائماً ≠ 7 ⇒ منفصلان ؛ P = 6/36 + 6/36 = 1/3',en:'Exclusive; 1/3'} },
-{ q:{ar:'<strong>السؤال 9:</strong> رمي مكعبين: «مجموع أكبر من 9» و«مجموع أصغر من 5». حدد الانفصال ثم الاحتمال.',en:'<strong>Q9:</strong> Two dice: "sum > 9" and "sum < 5". Exclusive? Probability?'},
-  options:[{ar:'منفصلان ، <span class="math-display">1/6</span>',en:'Exclusive, <span class="math-display">1/6</span>'},{ar:'منفصلان ، <span class="math-display">1/3</span>',en:'Exclusive, <span class="math-display">1/3</span>'},{ar:'غير منفصلين ، <span class="math-display">1/3</span>',en:'Not exclusive, <span class="math-display">1/3</span>'},{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'}],
-  correct:1, answer:{ar:'لا تقاطع ⇒ منفصلان ؛ P = 6/36 + 6/36 = 1/3',en:'Exclusive; 1/3'} },
-{ q:{ar:'<strong>السؤال 10:</strong> رمي مكعبين: «مجموع زوجي» و«مجموع أكبر من 8». حدد الانفصال ثم الاحتمال.',en:'<strong>Q10:</strong> Two dice: "even sum" and "sum > 8". Exclusive? Probability?'},
-  options:[{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'},{ar:'غير منفصلين ، <span class="math-display">28/36</span>',en:'Not exclusive, <span class="math-display">28/36</span>'},{ar:'غير منفصلين ، <span class="math-display">2/3</span>',en:'Not exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
-  correct:2, answer:{ar'>المجاميع 10 و12 مشتركة (4 نواتج) ⇒ غير منفصلين ؛ P = 18/36 + 10/36 - 4/36 = 24/36 = 2/3',en:'Not exclusive; 2/3'} }
-]},
-{ id:'s3', title:{ar:'🔹 القسم 3: أعداد من 1 إلى 20 (مثل 10) (Q11-Q15)',en:'🔹 Section 3: Numbers 1-20 (like 10) (Q11-Q15)'}, questions:[
-{ q:{ar:'<strong>السؤال 11 (تمرين 10):</strong> اختيار عدد من 1 إلى 20: «زوجي» و«قابل للقسمة على 3». حدد الانفصال ثم الاحتمال.',en:'<strong>Q11 (Ex.10):</strong> Pick 1-20: "even" and "divisible by 3". Exclusive? Probability?'},
+{ q:{ar:'<strong>السؤال 3 (تمرين 10):</strong> حدد الانفصال ثم الاحتمال: اختيار عدد عشوائياً من 1 إلى 20 والحصول على عدد زوجي أو قابل للقسمة على 3.',en:'<strong>Q3 (Ex.10):</strong> Exclusive or not? Pick 1-20: even or divisible by 3.'},
   svg: svgGraphs.fig_venn20,
   options:[{ar:'منفصلان ، <span class="math-display">4/5</span>',en:'Exclusive, <span class="math-display">4/5</span>'},{ar:'غير منفصلين ، <span class="math-display">4/5</span>',en:'Not exclusive, <span class="math-display">4/5</span>'},{ar:'منفصلان ، <span class="math-display">13/20</span>',en:'Exclusive, <span class="math-display">13/20</span>'},{ar:'غير منفصلين ، <span class="math-display">13/20</span>',en:'Not exclusive, <span class="math-display">13/20</span>'}],
   correct:3, answer:{ar:'6، 12، 18 مشتركة ⇒ غير منفصلين ؛ P = 10/20 + 6/20 - 3/20 = 13/20',en:'Not exclusive; 13/20'} },
-{ q:{ar:'<strong>السؤال 12:</strong> اختيار عدد من 1 إلى 20: «زوجي» و«قابل للقسمة على 5».',en:'<strong>Q12:</strong> Pick 1-20: "even" and "divisible by 5".'},
-  options:[{ar:'منفصلان ، <span class="math-display">3/5</span>',en:'Exclusive, <span class="math-display">3/5</span>'},{ar:'غير منفصلين ، <span class="math-display">3/5</span>',en:'Not exclusive, <span class="math-display">3/5</span>'},{ar:'غير منفصلين ، <span class="math-display">7/10</span>',en:'Not exclusive, <span class="math-display">7/10</span>'},{ar:'منفصلان ، <span class="math-display">14/20</span>',en:'Exclusive, <span class="math-display">14/20</span>'}],
-  correct:1, answer:{ar:'10 و20 مشتركان ⇒ غير منفصلين ؛ P = 10/20 + 4/20 - 2/20 = 12/20 = 3/5',en:'Not exclusive; 3/5'} },
-{ q:{ar:'<strong>السؤال 13:</strong> اختيار عدد من 1 إلى 20: «أولي» و«زوجي».',en:'<strong>Q13:</strong> Pick 1-20: "prime" and "even".'},
+{ q:{ar:'<strong>السؤال 4 (تمرين 11):</strong> حدد الانفصال ثم الاحتمال: إلقاء قطعة نقد معدنية والحصول على صورة أو كتابة.',en:'<strong>Q4 (Ex.11):</strong> Exclusive or not? Toss a coin: heads or tails.'},
+  svg: svgGraphs.fig_coin,
+  options:[{ar:'منفصلان ، <span class="math-display">1</span>',en:'Exclusive, <span class="math-display">1</span>'},{ar:'غير منفصلين ، <span class="math-display">1/2</span>',en:'Not exclusive, <span class="math-display">1/2</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'}],
+  correct:0, answer:{ar:'لا يمكن صورة وكتابة معاً ⇒ منفصلان ؛ P = 1/2 + 1/2 = 1',en:'Exclusive; P = 1'} },
+{ q:{ar:'<strong>السؤال 5 (تمرين 12):</strong> حدد الانفصال ثم الاحتمال: سحب بطاقة من مجموعة أوراق اللعب التي تضم 52 بطاقة: قلب أو ملك.',en:'<strong>Q5 (Ex.12):</strong> Exclusive or not? Draw a card: a heart or a king.'},
+  svg: svgGraphs.fig_hearts,
+  options:[{ar:'منفصلان ، <span class="math-display">17/52</span>',en:'Exclusive, <span class="math-display">17/52</span>'},{ar:'غير منفصلين ، <span class="math-display">17/52</span>',en:'Not exclusive, <span class="math-display">17/52</span>'},{ar:'منفصلان ، <span class="math-display">4/13</span>',en:'Exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">4/13</span>',en:'Not exclusive, <span class="math-display">4/13</span>'}],
+  correct:3, answer:{ar:'ملك القلوب مشترك ⇒ غير منفصلين ؛ P = 13/52 + 4/52 - 1/52 = 4/13',en:'Not exclusive; 4/13'} }
+]},
+{ id:'s2', title:{ar:'🔹 القسم 2: بطاقات مشابهة (Q6-Q10)',en:'🔹 Section 2: Similar Card Problems (Q6-Q10)'}, questions:[
+{ q:{ar:'<strong>السؤال 6:</strong> سحب بطاقة: ملكة أو ملك. حدد الانفصال ثم الاحتمال.',en:'<strong>Q6:</strong> Draw: a queen or a king. Exclusive? Probability?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">2/13</span>',en:'Not exclusive, <span class="math-display">2/13</span>'},{ar:'منفصلان ، <span class="math-display">2/13</span>',en:'Exclusive, <span class="math-display">2/13</span>'},{ar:'منفصلان ، <span class="math-display">1/169</span>',en:'Exclusive, <span class="math-display">1/169</span>'},{ar:'غير منفصلين ، <span class="math-display">8/13</span>',en:'Not exclusive, <span class="math-display">8/13</span>'}],
+  correct:1, answer:{ar:'لا بطاقة ملكة وملك معاً ⇒ منفصلان ؛ P = 4/52 + 4/52 = 2/13',en:'Exclusive; 2/13'} },
+{ q:{ar:'<strong>السؤال 7:</strong> سحب بطاقة: بستون (♠) أو ملك. حدد الانفصال ثم الاحتمال.',en:'<strong>Q7:</strong> Draw: a spade or a king. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">4/13</span>',en:'Exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">4/13</span>',en:'Not exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">17/52</span>',en:'Not exclusive, <span class="math-display">17/52</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
+  correct:1, answer:{ar:'ملك البستون مشترك ⇒ غير منفصلين ؛ P = 13/52 + 4/52 - 1/52 = 4/13',en:'Not exclusive; 4/13'} },
+{ q:{ar:'<strong>السؤال 8:</strong> سحب بطاقة: آص (A) أو ورقة وجه (J، Q، K). حدد الانفصال ثم الاحتمال.',en:'<strong>Q8:</strong> Draw: an ace or a face card. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">4/13</span>',en:'Exclusive, <span class="math-display">4/13</span>'},{ar:'غير منفصلين ، <span class="math-display">3/13</span>',en:'Not exclusive, <span class="math-display">3/13</span>'},{ar:'منفصلان ، <span class="math-display">3/13</span>',en:'Exclusive, <span class="math-display">3/13</span>'},{ar:'غير منفصلين ، <span class="math-display">1/2</span>',en:'Not exclusive, <span class="math-display">1/2</span>'}],
+  correct:0, answer:{ar:'لا بطاقة آص ووجه معاً ⇒ منفصلان ؛ P = 4/52 + 12/52 = 16/52 = 4/13',en:'Exclusive; 4/13'} },
+{ q:{ar:'<strong>السؤال 9:</strong> سحب بطاقة: حمراء أو ورقة وجه. حدد الانفصال ثم الاحتمال.',en:'<strong>Q9:</strong> Draw: a red card or a face card. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">8/13</span>',en:'Exclusive, <span class="math-display">8/13</span>'},{ar:'غير منفصلين ، <span class="math-display">19/26</span>',en:'Not exclusive, <span class="math-display">19/26</span>'},{ar:'غير منفصلين ، <span class="math-display">8/13</span>',en:'Not exclusive, <span class="math-display">8/13</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
+  correct:2, answer:{ar:'6 أوراق وجه حمراء مشتركة ⇒ غير منفصلين ؛ P = 26/52 + 12/52 - 6/52 = 32/52 = 8/13',en:'Not exclusive; 8/13'} },
+{ q:{ar:'<strong>السؤال 10:</strong> سحب بطاقة: ورقة عدد (2-10) أو ورقة وجه. حدد الانفصال ثم الاحتمال.',en:'<strong>Q10:</strong> Draw: a number card (2-10) or a face card. Exclusive? Probability?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">12/13</span>',en:'Not exclusive, <span class="math-display">12/13</span>'},{ar:'منفصلان ، <span class="math-display">9/13</span>',en:'Exclusive, <span class="math-display">9/13</span>'},{ar:'منفصلان ، <span class="math-display">12/13</span>',en:'Exclusive, <span class="math-display">12/13</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'}],
+  correct:2, answer:{ar:'لا تداخل ⇒ منفصلان ؛ P = 36/52 + 12/52 = 48/52 = 12/13',en:'Exclusive; 12/13'} }
+]},
+{ id:'s3', title:{ar:'🔹 القسم 3: مكعبان مشابهة (Q11-Q15)',en:'🔹 Section 3: Similar Two-Dice Problems (Q11-Q15)'}, questions:[
+{ q:{ar:'<strong>السؤال 11:</strong> رمي مكعبين: مجموع 5 أو مجموع 10. حدد الانفصال ثم الاحتمال.',en:'<strong>Q11:</strong> Two dice: sum 5 or sum 10. Exclusive? Probability?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">7/36</span>',en:'Not exclusive, <span class="math-display">7/36</span>'},{ar:'منفصلان ، <span class="math-display">7/36</span>',en:'Exclusive, <span class="math-display">7/36</span>'},{ar:'منفصلان ، <span class="math-display">1/4</span>',en:'Exclusive, <span class="math-display">1/4</span>'},{ar:'غير منفصلين ، <span class="math-display">1/4</span>',en:'Not exclusive, <span class="math-display">1/4</span>'}],
+  correct:1, answer:{ar:'مجموعان مختلفان مستحيلاً معاً ⇒ منفصلان ؛ P = 4/36 + 3/36 = 7/36',en:'Exclusive; 7/36'} },
+{ q:{ar:'<strong>السؤال 12:</strong> رمي مكعبين: مزدوج أو مجموع 6. حدد الانفصال ثم الاحتمال.',en:'<strong>Q12:</strong> Two dice: doubles or sum 6. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">5/18</span>',en:'Exclusive, <span class="math-display">5/18</span>'},{ar:'غير منفصلين ، <span class="math-display">5/18</span>',en:'Not exclusive, <span class="math-display">5/18</span>'},{ar:'غير منفصلين ، <span class="math-display">11/36</span>',en:'Not exclusive, <span class="math-display">11/36</span>'},{ar:'منفصلان ، <span class="math-display">1/6</span>',en:'Exclusive, <span class="math-display">1/6</span>'}],
+  correct:1, answer:{ar:'(3,3) مشترك ⇒ غير منفصلين ؛ P = 6/36 + 5/36 - 1/36 = 10/36 = 5/18',en:'Not exclusive; 5/18'} },
+{ q:{ar:'<strong>السؤال 13:</strong> رمي مكعبين: مجموع 7 أو مزدوج. حدد الانفصال ثم الاحتمال.',en:'<strong>Q13:</strong> Two dice: sum 7 or doubles. Exclusive? Probability?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">1/3</span>',en:'Not exclusive, <span class="math-display">1/3</span>'},{ar:'منفصلان ، <span class="math-display">1/6</span>',en:'Exclusive, <span class="math-display">1/6</span>'},{ar:'منفصلان ، <span class="math-display">1/3</span>',en:'Exclusive, <span class="math-display">1/3</span>'},{ar:'غير منفصلين ، <span class="math-display">11/36</span>',en:'Not exclusive, <span class="math-display">11/36</span>'}],
+  correct:2, answer:{ar:'مجموع المزدوج زوجي لا يساوي 7 ⇒ منفصلان ؛ P = 6/36 + 6/36 = 1/3',en:'Exclusive; 1/3'} },
+{ q:{ar:'<strong>السؤال 14:</strong> رمي مكعبين: مجموع أكبر من 10 أو مجموع أصغر من 4. حدد الانفصال ثم الاحتمال.',en:'<strong>Q14:</strong> Two dice: sum > 10 or sum < 4. Exclusive? Probability?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">1/6</span>',en:'Not exclusive, <span class="math-display">1/6</span>'},{ar:'منفصلان ، <span class="math-display">1/6</span>',en:'Exclusive, <span class="math-display">1/6</span>'},{ar:'منفصلان ، <span class="math-display">1/3</span>',en:'Exclusive, <span class="math-display">1/3</span>'},{ar:'غير منفصلين ، <span class="math-display">5/36</span>',en:'Not exclusive, <span class="math-display">5/36</span>'}],
+  correct:1, answer:{ar:'لا مجموع يحقق الشرطين ⇒ منفصلان ؛ P = 3/36 + 3/36 = 1/6',en:'Exclusive; 1/6'} },
+{ q:{ar:'<strong>السؤال 15:</strong> رمي مكعبين: المكعب الأول 3 أو المجموع 8. حدد الانفصال ثم الاحتمال.',en:'<strong>Q15:</strong> Two dice: first die 3 or sum 8. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">5/18</span>',en:'Exclusive, <span class="math-display">5/18</span>'},{ar:'غير منفصلين ، <span class="math-display">11/36</span>',en:'Not exclusive, <span class="math-display">11/36</span>'},{ar:'غير منفصلين ، <span class="math-display">5/18</span>',en:'Not exclusive, <span class="math-display">5/18</span>'},{ar:'منفصلان ، <span class="math-display">1/3</span>',en:'Exclusive, <span class="math-display">1/3</span>'}],
+  correct:2, answer:{ar:'(3,5) مشترك ⇒ غير منفصلين ؛ P = 6/36 + 5/36 - 1/36 = 5/18',en:'Not exclusive; 5/18'} }
+]},
+{ id:'s4', title:{ar:'🔹 القسم 4: أعداد 1-20 مشابهة (Q16-Q20)',en:'🔹 Section 4: Similar Numbers 1-20 (Q16-Q20)'}, questions:[
+{ q:{ar:'<strong>السؤال 16:</strong> اختيار عدد من 1 إلى 20: مضاعف 4 أو مضاعف 5. حدد الانفصال ثم الاحتمال.',en:'<strong>Q16:</strong> Pick 1-20: multiple of 4 or of 5. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">2/5</span>',en:'Exclusive, <span class="math-display">2/5</span>'},{ar:'غير منفصلين ، <span class="math-display">2/5</span>',en:'Not exclusive, <span class="math-display">2/5</span>'},{ar:'غير منفصلين ، <span class="math-display">9/20</span>',en:'Not exclusive, <span class="math-display">9/20</span>'},{ar:'منفصلان ، <span class="math-display">1/5</span>',en:'Exclusive, <span class="math-display">1/5</span>'}],
+  correct:1, answer:{ar:'20 مشترك ⇒ غير منفصلين ؛ P = 5/20 + 4/20 - 1/20 = 8/20 = 2/5',en:'Not exclusive; 2/5'} },
+{ q:{ar:'<strong>السؤال 17:</strong> اختيار عدد من 1 إلى 20: أولي أو مضاعف 5. حدد الانفصال ثم الاحتمال.',en:'<strong>Q17:</strong> Pick 1-20: prime or multiple of 5. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">11/20</span>',en:'Exclusive, <span class="math-display">11/20</span>'},{ar:'غير منفصلين ، <span class="math-display">3/5</span>',en:'Not exclusive, <span class="math-display">3/5</span>'},{ar:'غير منفصلين ، <span class="math-display">11/20</span>',en:'Not exclusive, <span class="math-display">11/20</span>'},{ar:'منفصلان ، <span class="math-display">12/20</span>',en:'Exclusive, <span class="math-display">12/20</span>'}],
+  correct:2, answer:{ar:'العدد 5 مشترك ⇒ غير منفصلين ؛ P = 8/20 + 4/20 - 1/20 = 11/20',en:'Not exclusive; 11/20'} },
+{ q:{ar:'<strong>السؤال 18:</strong> اختيار عدد من 1 إلى 20: أصغر من 6 أو أكبر من 14. حدد الانفصال ثم الاحتمال.',en:'<strong>Q18:</strong> Pick 1-20: less than 6 or greater than 14. Exclusive? Probability?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">11/20</span>',en:'Not exclusive, <span class="math-display">11/20</span>'},{ar:'منفصلان ، <span class="math-display">9/20</span>',en:'Exclusive, <span class="math-display">9/20</span>'},{ar:'منفصلان ، <span class="math-display">11/20</span>',en:'Exclusive, <span class="math-display">11/20</span>'},{ar:'غير منفصلين ، <span class="math-display">3/10</span>',en:'Not exclusive, <span class="math-display">3/10</span>'}],
+  correct:2, answer:{ar:'لا تداخل ⇒ منفصلان ؛ P = 5/20 + 6/20 = 11/20',en:'Exclusive; 11/20'} },
+{ q:{ar:'<strong>السؤال 19:</strong> اختيار عدد من 1 إلى 20: زوجي أو أولي. حدد الانفصال ثم الاحتمال.',en:'<strong>Q19:</strong> Pick 1-20: even or prime. Exclusive? Probability?'},
   options:[{ar:'منفصلان ، <span class="math-display">17/20</span>',en:'Exclusive, <span class="math-display">17/20</span>'},{ar:'غير منفصلين ، <span class="math-display">9/10</span>',en:'Not exclusive, <span class="math-display">9/10</span>'},{ar:'غير منفصلين ، <span class="math-display">17/20</span>',en:'Not exclusive, <span class="math-display">17/20</span>'},{ar:'منفصلان ، <span class="math-display">18/20</span>',en:'Exclusive, <span class="math-display">18/20</span>'}],
-  correct:2, answer:{ar:'العدد 2 مشترك ⇒ غير منفصلين ؛ P = 8/20 + 10/20 - 1/20 = 17/20',en:'Not exclusive; 17/20'} },
-{ q:{ar:'<strong>السؤال 14:</strong> اختيار عدد من 1 إلى 20: «يقبل القسمة على 4» و«يقبل القسمة على 6».',en:'<strong>Q14:</strong> Pick 1-20: "divisible by 4" and "divisible by 6".'},
-  options:[{ar:'منفصلان ، <span class="math-display">7/20</span>',en:'Exclusive, <span class="math-display">7/20</span>'},{ar:'غير منفصلين ، <span class="math-display">8/20</span>',en:'Not exclusive, <span class="math-display">8/20</span>'},{ar:'غير منفصلين ، <span class="math-display">7/20</span>',en:'Not exclusive, <span class="math-display">7/20</span>'},{ar:'منفصلان ، <span class="math-display">2/5</span>',en:'Exclusive, <span class="math-display">2/5</span>'}],
-  correct:2, answer:{ar:'12 مشترك ⇒ غير منفصلين ؛ P = 5/20 + 3/20 - 1/20 = 7/20',en:'Not exclusive; 7/20'} },
-{ q:{ar:'<strong>السؤال 15:</strong> اختيار عدد من 1 إلى 20: «أصغر من 5» و«أكبر من 15».',en:'<strong>Q15:</strong> Pick 1-20: "less than 5" and "greater than 15".'},
-  options:[{ar:'غير منفصلين ، <span class="math-display">9/20</span>',en:'Not exclusive, <span class="math-display">9/20</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'},{ar:'منفصلان ، <span class="math-display">9/20</span>',en:'Exclusive, <span class="math-display">9/20</span>'},{ar:'غير منفصلين ، <span class="math-display">4/5</span>',en:'Not exclusive, <span class="math-display">4/5</span>'}],
-  correct:2, answer:{ar:'لا عدد مشترك ⇒ منفصلان ؛ P = 4/20 + 5/20 = 9/20',en:'Exclusive; 9/20'} }
+  correct:2, answer:{ar:'العدد 2 مشترك ⇒ غير منفصلين ؛ P = 10/20 + 8/20 - 1/20 = 17/20',en:'Not exclusive; 17/20'} },
+{ q:{ar:'<strong>السؤال 20:</strong> اختيار عدد من 1 إلى 20: مضاعف 6 أو مضاعف 9. حدد الانفصال ثم الاحتمال.',en:'<strong>Q20:</strong> Pick 1-20: multiple of 6 or of 9. Exclusive? Probability?'},
+  options:[{ar:'منفصلان ، <span class="math-display">1/5</span>',en:'Exclusive, <span class="math-display">1/5</span>'},{ar:'غير منفصلين ، <span class="math-display">3/10</span>',en:'Not exclusive, <span class="math-display">3/10</span>'},{ar:'غير منفصلين ، <span class="math-display">1/5</span>',en:'Not exclusive, <span class="math-display">1/5</span>'},{ar:'منفصلان ، <span class="math-display">1/4</span>',en:'Exclusive, <span class="math-display">1/4</span>'}],
+  correct:2, answer:{ar:'18 مشترك ⇒ غير منفصلين ؛ P = 3/20 + 2/20 - 1/20 = 4/20 = 1/5',en:'Not exclusive; 1/5'} }
 ]},
-{ id:'s4', title:{ar:'🔹 القسم 4: مفاهيم الانفصال (Q16-Q20)',en:'🔹 Section 4: Exclusivity Concepts (Q16-Q20)'}, questions:[
-{ q:{ar:'<strong>السؤال 16:</strong> الحدثان المنفصلان (المتنافيان) هما اللذان:',en:'<strong>Q16:</strong> Mutually exclusive events are those that:'},
-  svg: svgGraphs.fig_rules,
-  options:[{ar:'يقعان دائماً معاً',en:'Always occur together'},{ar:'لا يمكن أن يقعا معاً في الوقت نفسه',en:'Cannot occur at the same time'},{ar:'تقاطعهما غير فارغ',en:'Have non-empty intersection'},{ar:'اتحادهما فارغ',en:'Have empty union'}],
-  correct:1, answer:{ar:'التعريف: A ∩ B = ∅',en:'A ∩ B = ∅'} },
-{ q:{ar:'<strong>السؤال 17:</strong> إذا كان A و B منفصلين فإن P(A∪B) تساوي:',en:'<strong>Q17:</strong> If A, B exclusive then P(A∪B) ='},
+{ id:'s5', title:{ar:'🔹 القسم 5: قواعد ومفاهيم (Q21-Q25)',en:'🔹 Section 5: Rules & Concepts (Q21-Q25)'}, questions:[
+{ q:{ar:'<strong>السؤال 21:</strong> الحدثان المنفصلان (المتنافيان) هما اللذان:',en:'<strong>Q21:</strong> Mutually exclusive events are those that:'},
+  svg: svgGraphs.fig_decision,
+  options:[{ar:'يقعان دائماً معاً',en:'Always occur together'},{ar:'لا يمكن أن يقعا معاً في الوقت نفسه',en:'Cannot occur together'},{ar:'تقاطعهما غير فارغ',en:'Have non-empty intersection'},{ar:'يكمل أحدهما الآخر',en:'Complement each other'}],
+  correct:1, answer:{ar:'التعريف: لا نواتج مشتركة ⇒ A ∩ B = ∅',en:'A ∩ B = ∅'} },
+{ q:{ar:'<strong>السؤال 22:</strong> قاعدة الجمع للحدثين المنفصلين:',en:'<strong>Q22:</strong> Addition rule for exclusive events:'},
   options:[{ar:'<span class="math-display">P(A) + P(B)</span>',en:'<span class="math-display">P(A) + P(B)</span>'},{ar:'<span class="math-display">P(A)·P(B)</span>',en:'<span class="math-display">P(A)·P(B)</span>'},{ar:'<span class="math-display">P(A) + P(B) - P(A∩B)</span>',en:'<span class="math-display">P(A) + P(B) - P(A∩B)</span>'},{ar:'<span class="math-display">1 - P(A)</span>',en:'<span class="math-display">1 - P(A)</span>'}],
-  correct:0, answer:{ar:'لأن P(A∩B) = 0 فلا طرح',en:'P(A∩B)=0 ⇒ simple sum'} },
-{ q:{ar:'<strong>السؤال 18:</strong> إذا كان A و B غير منفصلين فإن P(A∪B) تساوي:',en:'<strong>Q18:</strong> If A, B not exclusive then P(A∪B) ='},
-  options:[{ar:'<span class="math-display">P(A) + P(B)</span>',en:'<span class="math-display">P(A) + P(B)</span>'},{ar:'<span class="math-display">P(A) + P(B) - P(A∩B)</span>',en:'<span class="math-display">P(A) + P(B) - P(A∩B)</span>'},{ar:'<span class="math-display">P(A)·P(B)</span>',en:'<span class="math-display">P(A)·P(B)</span>'},{ar:'<span class="math-display">P(A∩B) - P(A)</span>',en:'<span class="math-display">P(A∩B) - P(A)</span>'}],
-  correct:1, answer:{ar:'نطرح التقاطع مرة واحدة لتفادي العد المزدوج',en:'Subtract overlap once'} },
-{ q:{ar:'<strong>السؤال 19:</strong> إذا كان <span class="math-display">P(A∩B) = 0</span> فالحدثان:',en:'<strong>Q19:</strong> If P(A∩B) = 0, the events are:'},
-  options:[{ar:'مستقلان',en:'Independent'},{ar:'متكاملان',en:'Complementary'},{ar:'منفصلان',en:'Mutually exclusive'},{ar:'أكيدان',en:'Certain'}],
-  correct:2, answer:{ar:'انعدام التقاطع هو تعريف الانفصال',en:'Zero intersection = exclusive'} },
-{ q:{ar:'<strong>السؤال 20:</strong> الحدثان المتكاملان (A و A\') هما:',en:'<strong>Q20:</strong> Complementary events A and A\' are:'},
-  options:[{ar:'منفصلان واتحادهما كل الفضاء',en:'Exclusive and their union is the whole space'},{ar:'منفصلان فقط',en:'Exclusive only'},{ar:'غير منفصلان',en:'Not exclusive'},{ar:'مستقلان',en:'Independent'}],
-  correct:0, answer:{ar:'التكامل = تنافٍ + تغطية كاملة ⇒ P(A)+P(A\') = 1',en:'Exclusive + exhaustive'} }
+  correct:0, answer:{ar:'لا طرح لأن التقاطع فارغ',en:'No subtraction; intersection empty'} },
+{ q:{ar:'<strong>السؤال 23:</strong> في قاعدة الجمع لغير المنفصلين نطرح P(A∩B) لأن:',en:'<strong>Q23:</strong> In the non-exclusive addition rule we subtract P(A∩B) because:'},
+  svg: svgGraphs.fig_rules2,
+  options:[{ar:'لتبسيط الحساب فقط',en:'Only to simplify computation'},{ar:'لأن التقاطع فارغ',en:'Because the intersection is empty'},{ar:'لتجنب عدّ العناصر المشتركة مرتين',en:'To avoid counting common elements twice'},{ar:'لأن الحدثين مستقلان',en:'Because the events are independent'}],
+  correct:2, answer:{ar:'العناصر المشتركة تُحسب في P(A) وفي P(B) فنطرحها مرة',en:'Common outcomes counted twice otherwise'} },
+{ q:{ar:'<strong>السؤال 24:</strong> إذا كان <span class="math-display">P(A∩B) = 0</span> فالحدثان:',en:'<strong>Q24:</strong> If P(A∩B) = 0, the events are:'},
+  options:[{ar:'مستقلان',en:'Independent'},{ar:'منفصلان',en:'Mutually exclusive'},{ar:'متكاملان',en:'Complementary'},{ar:'مستحيلان',en:'Impossible'}],
+  correct:1, answer:{ar:'انعدام التقاطع = التنافي',en:'Zero intersection = exclusive'} },
+{ q:{ar:'<strong>السؤال 25:</strong> أي علاقة تكافئ كون A و B منفصلين؟',en:'<strong>Q25:</strong> Which relation is equivalent to A, B being exclusive?'},
+  options:[{ar:'<span class="math-display">P(A∪B) = 0</span>',en:'<span class="math-display">P(A∪B) = 0</span>'},{ar:'<span class="math-display">P(A∩B) = 0</span>',en:'<span class="math-display">P(A∩B) = 0</span>'},{ar:'<span class="math-display">P(A) = P(B)</span>',en:'<span class="math-display">P(A) = P(B)</span>'},{ar:'<span class="math-display">P(A) + P(B) = 1</span>',en:'<span class="math-display">P(A) + P(B) = 1</span>'}],
+  correct:1, answer:{ar:'التعريف الرياضي للتنافي',en:'Mathematical definition of exclusivity'} }
 ]},
-{ id:'s5', title:{ar:'🔹 القسم 5: كرات وطلاب ومكعب (Q21-Q25)',en:'🔹 Section 5: Balls, Students & a Die (Q21-Q25)'}, questions:[
-{ q:{ar:'<strong>السؤال 21:</strong> كيس: 4 حمراء و6 زرقاء و5 خضراء. سحب كرة: «حمراء» أو «زرقاء».',en:'<strong>Q21:</strong> Bag: 4 red, 6 blue, 5 green. Draw: "red" or "blue".'},
-  options:[{ar:'غير منفصلين ، <span class="math-display">2/3</span>',en:'Not exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">4/15</span>',en:'Exclusive, <span class="math-display">4/15</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'}],
-  correct:1, answer:{ar:'كرة واحدة لا تكون حمراء وزرقاء ⇒ منفصلان ؛ P = 10/15 = 2/3',en:'Exclusive; 2/3'} },
-{ q:{ar:'<strong>السؤال 22:</strong> صف 30: كرة قدم 12، سلة 8، كلاهما 4. اختيار طالب: «كرة» أو «سلة».',en:'<strong>Q22:</strong> Class 30: football 12, basketball 8, both 4. Pick: "football" or "basketball".'},
-  svg: svgGraphs.fig_class,
-  options:[{ar:'منفصلان ، <span class="math-display">8/15</span>',en:'Exclusive, <span class="math-display">8/15</span>'},{ar:'غير منفصلين ، <span class="math-display">2/3</span>',en:'Not exclusive, <span class="math-display">2/3</span>'},{ar:'غير منفصلين ، <span class="math-display">8/15</span>',en:'Not exclusive, <span class="math-display">8/15</span>'},{ar:'منفصلان ، <span class="math-display">4/5</span>',en:'Exclusive, <span class="math-display">4/5</span>'}],
-  correct:2, answer:{ar:'4 يلعبون الاثنين ⇒ غير منفصلين ؛ P = (12+8-4)/30 = 8/15',en:'Not exclusive; 8/15'} },
-{ q:{ar:'<strong>السؤال 23:</strong> من 40 طالباً: نجح في الرياضيات 25 وفي العلوم 20 وفيهما 15. «رياضيات أو علوم»؟',en:'<strong>Q23:</strong> Of 40: math 25, science 20, both 15. "Math or science"?'},
-  options:[{ar:'منفصلان ، <span class="math-display">3/4</span>',en:'Exclusive, <span class="math-display">3/4</span>'},{ar:'غير منفصلين ، <span class="math-display">3/4</span>',en:'Not exclusive, <span class="math-display">3/4</span>'},{ar:'غير منفصلين ، <span class="math-display">11/20</span>',en:'Not exclusive, <span class="math-display">11/20</span>'},{ar:'منفصلان ، <span class="math-display">45/40</span>',en:'Exclusive, <span class="math-display">45/40</span>'}],
-  correct:1, answer:{ar:'15 مشتركين ⇒ غير منفصلين ؛ P = (25+20-15)/40 = 30/40 = 3/4',en:'Not exclusive; 3/4'} },
-{ q:{ar:'<strong>السؤال 24:</strong> رمي مكعب: «زوجي» أو «أولي».',en:'<strong>Q24:</strong> A die: "even" or "prime".'},
-  options:[{ar:'منفصلان ، <span class="math-display">5/6</span>',en:'Exclusive, <span class="math-display">5/6</span>'},{ar:'غير منفصلين ، <span class="math-display">5/6</span>',en:'Not exclusive, <span class="math-display">5/6</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'},{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'}],
-  correct:1, answer:{ar:'العدد 2 مشترك ⇒ غير منفصلين ؛ P = 3/6 + 3/6 - 1/6 = 5/6',en:'Not exclusive; 5/6'} },
-{ q:{ar:'<strong>السؤال 25:</strong> رمي مكعب: «أكبر من 4» أو «أصغر من 3».',en:'<strong>Q25:</strong> A die: "greater than 4" or "less than 3".'},
-  options:[{ar:'غير منفصلين ، <span class="math-display">2/3</span>',en:'Not exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">1/3</span>',en:'Exclusive, <span class="math-display">1/3</span>'},{ar:'غير منفصلين ، <span class="math-display">5/6</span>',en:'Not exclusive, <span class="math-display">5/6</span>'}],
-  correct:1, answer:{ar:'{5,6} و {1,2} لا تداخل ⇒ منفصلان ؛ P = 2/6 + 2/6 = 2/3',en:'Exclusive; 2/3'} }
-]},
-{ id:'s6', title:{ar:'🔹 القسم 6: مسائل مركبة (Q26-Q30)',en:'🔹 Section 6: Mixed Problems (Q26-Q30)'}, questions:[
-{ q:{ar:'<strong>السؤال 26:</strong> قرص 8 قطاعات (1-8): «زوجي» أو «أكبر من 5».',en:'<strong>Q26:</strong> Spinner 1-8: "even" or "greater than 5".'},
-  options:[{ar:'منفصلان ، <span class="math-display">5/8</span>',en:'Exclusive, <span class="math-display">5/8</span>'},{ar:'غير منفصلين ، <span class="math-display">7/8</span>',en:'Not exclusive, <span class="math-display">7/8</span>'},{ar:'غير منفصلين ، <span class="math-display">5/8</span>',en:'Not exclusive, <span class="math-display">5/8</span>'},{ar:'منفصلان ، <span class="math-display">3/8</span>',en:'Exclusive, <span class="math-display">3/8</span>'}],
-  correct:2, answer:{ar:'6 و8 مشتركان ⇒ غير منفصلين ؛ P = 4/8 + 3/8 - 2/8 = 5/8',en:'Not exclusive; 5/8'} },
-{ q:{ar:'<strong>السؤال 27:</strong> رمي قطعتين: «صورة على الأقل» أو «كتابة على الأقل».',en:'<strong>Q27:</strong> Two coins: "at least one head" or "at least one tail".'},
-  options:[{ar:'منفصلان ، <span class="math-display">1</span>',en:'Exclusive, <span class="math-display">1</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'},{ar:'غير منفصلين ، <span class="math-display">3/4</span>',en:'Not exclusive, <span class="math-display">3/4</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
-  correct:1, answer:{ar:'HT و TH يحققان كليهما ⇒ غير منفصلين ؛ P = 3/4 + 3/4 - 2/4 = 1',en:'Not exclusive; 1'} },
-{ q:{ar:'<strong>السؤال 28:</strong> سحب بطاقة: «ورقة وجه (J,Q,K)» أو «بستون ♠».',en:'<strong>Q28:</strong> Draw: "face card" or "spade".'},
-  options:[{ar:'منفصلان ، <span class="math-display">11/26</span>',en:'Exclusive, <span class="math-display">11/26</span>'},{ar:'غير منفصلين ، <span class="math-display">25/52</span>',en:'Not exclusive, <span class="math-display">25/52</span>'},{ar:'غير منفصلين ، <span class="math-display">11/26</span>',en:'Not exclusive, <span class="math-display">11/26</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
-  correct:2, answer:{ar:'3 أوراق وجه بستون مشتركة ⇒ غير منفصلين ؛ P = 12/52 + 13/52 - 3/52 = 22/52 = 11/26',en:'Not exclusive; 11/26'} },
-{ q:{ar:'<strong>السؤال 29:</strong> حدثان منفصلان P(A) = 0.4 و P(B) = 0.5. ما P(A∪B)؟',en:'<strong>Q29:</strong> Exclusive events P(A)=0.4, P(B)=0.5. P(A∪B) ='},
-  options:[{ar:'<span class="math-display">0.2</span>',en:'<span class="math-display">0.2</span>'},{ar:'<span class="math-display">0.9</span>',en:'<span class="math-display">0.9</span>'},{ar:'<span class="math-display">0.7</span>',en:'<span class="math-display">0.7</span>'},{ar:'<span class="math-display">1.1</span>',en:'<span class="math-display">1.1</span>'}],
-  correct:1, answer:{ar:'منفصلان ⇒ جمع مباشر: 0.9',en:'0.9'} },
-{ q:{ar:'<strong>السؤال 30:</strong> حدثان غير منفصلين P(A) = 0.4 ، P(B) = 0.5 ، P(A∩B) = 0.2. ما P(A∪B)؟',en:'<strong>Q30:</strong> Not exclusive: P(A)=0.4, P(B)=0.5, P(A∩B)=0.2. P(A∪B) ='},
-  options:[{ar:'<span class="math-display">0.9</span>',en:'<span class="math-display">0.9</span>'},{ar:'<span class="math-display">0.7</span>',en:'<span class="math-display">0.7</span>'},{ar:'<span class="math-display">0.2</span>',en:'<span class="math-display">0.2</span>'},{ar:'<span class="math-display">1.1</span>',en:'<span class="math-display">1.1</span>'}],
-  correct:1, answer:{ar:'0.4 + 0.5 - 0.2 = 0.7',en:'0.7'} }
+{ id:'s6', title:{ar:'🔹 القسم 6: مواقف حياتية (Q26-Q30)',en:'🔹 Section 6: Real-Life Situations (Q26-Q30)'}, questions:[
+{ q:{ar:'<strong>السؤال 26:</strong> صف من 40 طالباً: تفوق في الرياضيات 15 وفي العلوم 10 وفي المادتين 5. اختيار طالب: «رياضيات أو علوم»؟',en:'<strong>Q26:</strong> Class of 40: 15 excel in math, 10 in science, 5 in both. Pick: math or science?'},
+  svg: svgGraphs.fig_class40,
+  options:[{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'},{ar:'غير منفصلين ، <span class="math-display">1/2</span>',en:'Not exclusive, <span class="math-display">1/2</span>'},{ar:'غير منفصلين ، <span class="math-display">5/8</span>',en:'Not exclusive, <span class="math-display">5/8</span>'},{ar:'منفصلان ، <span class="math-display">25/40</span>',en:'Exclusive, <span class="math-display">25/40</span>'}],
+  correct:1, answer:{ar:'5 مشتركين ⇒ غير منفصلين ؛ P = (15+10-5)/40 = 1/2',en:'Not exclusive; 1/2'} },
+{ q:{ar:'<strong>السؤال 27:</strong> كيس فيه 5 حمراء و4 زرقاء و3 خضراء: سحب كرة «حمراء أو خضراء»؟',en:'<strong>Q27:</strong> Bag: 5 red, 4 blue, 3 green. Draw: red or green?'},
+  options:[{ar:'غير منفصلين ، <span class="math-display">2/3</span>',en:'Not exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">7/12</span>',en:'Exclusive, <span class="math-display">7/12</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'}],
+  correct:1, answer:{ar:'كرة واحدة بلون واحد ⇒ منفصلان ؛ P = 5/12 + 3/12 = 2/3',en:'Exclusive; 2/3'} },
+{ q:{ar:'<strong>السؤال 28:</strong> نادٍ من 60 عضواً: كرة قدم 25 وشطرنج 20 وكلاهما 10. عضو عشوائي: «كرة أو شطرنج»؟',en:'<strong>Q28:</strong> Club of 60: football 25, chess 20, both 10. Random member: football or chess?'},
+  options:[{ar:'منفصلان ، <span class="math-display">7/12</span>',en:'Exclusive, <span class="math-display">7/12</span>'},{ar:'غير منفصلين ، <span class="math-display">3/4</span>',en:'Not exclusive, <span class="math-display">3/4</span>'},{ar:'غير منفصلين ، <span class="math-display">7/12</span>',en:'Not exclusive, <span class="math-display">7/12</span>'},{ar:'منفصلان ، <span class="math-display">5/12</span>',en:'Exclusive, <span class="math-display">5/12</span>'}],
+  correct:2, answer:{ar:'10 مشتركين ⇒ غير منفصلين ؛ P = (25+20-10)/60 = 35/60 = 7/12',en:'Not exclusive; 7/12'} },
+{ q:{ar:'<strong>السؤال 29:</strong> رمي مكعب: «زوجي» أو «أكبر من 4»؟',en:'<strong>Q29:</strong> A die: even or greater than 4?'},
+  options:[{ar:'منفصلان ، <span class="math-display">2/3</span>',en:'Exclusive, <span class="math-display">2/3</span>'},{ar:'غير منفصلين ، <span class="math-display">5/6</span>',en:'Not exclusive, <span class="math-display">5/6</span>'},{ar:'غير منفصلين ، <span class="math-display">2/3</span>',en:'Not exclusive, <span class="math-display">2/3</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
+  correct:2, answer:{ar:'العدد 6 مشترك ⇒ غير منفصلين ؛ P = 3/6 + 2/6 - 1/6 = 4/6 = 2/3',en:'Not exclusive; 2/3'} },
+{ q:{ar:'<strong>السؤال 30:</strong> رمي قطعتين: «صورة واحدة على الأقل» أو «كتابة واحدة على الأقل»؟',en:'<strong>Q30:</strong> Two coins: at least one head or at least one tail?'},
+  options:[{ar:'منفصلان ، <span class="math-display">1</span>',en:'Exclusive, <span class="math-display">1</span>'},{ar:'غير منفصلين ، <span class="math-display">3/4</span>',en:'Not exclusive, <span class="math-display">3/4</span>'},{ar:'غير منفصلين ، <span class="math-display">1</span>',en:'Not exclusive, <span class="math-display">1</span>'},{ar:'منفصلان ، <span class="math-display">1/2</span>',en:'Exclusive, <span class="math-display">1/2</span>'}],
+  correct:2, answer:{ar:'HT و TH يحققان كليهما ⇒ غير منفصلين ؛ P = 3/4 + 3/4 - 2/4 = 1',en:'Not exclusive; 1'} }
 ]}
 ]};
 
@@ -405,10 +429,10 @@ function prepareShuffledExam(){rng=mulberry32(currentSeed);examData=JSON.parse(J
 function reshuffleExam(){if(confirm(currentLang==='ar'?'🔄 سيتم إنشاء أسئلة جديدة ومسح إجاباتك. هل أنت متأكد؟':'🔄 New questions will be generated. Are you sure?')){currentSeed=Date.now();timeRemaining=TOTAL_TIME;answersVisible=false;prepareShuffledExam();renderExam();saveState();alert(currentLang==='ar'?'🎲 تم تغيير الأسئلة! حظاً موفقاً! 🍀':' Questions changed! Good luck! 🍀');window.scrollTo({top:0,behavior:'smooth'})}}
 function setLanguage(lang){currentLang=lang;document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.getElementById('btn-ar').classList.toggle('active',lang==='ar');document.getElementById('btn-en').classList.toggle('active',lang==='en');document.body.classList.toggle('en-mode',lang==='en');document.querySelectorAll('[data-ar]').forEach(el=>{el.textContent=el.getAttribute('data-'+lang)});document.querySelectorAll('[data-placeholder-ar]').forEach(el=>{el.placeholder=el.getAttribute('data-placeholder-'+lang)});renderExam();saveState(false)}
 function renderExam(){const container=document.getElementById('exam-content');const lbl={option:['a)','b)','c)','d)'],answer:currentLang==='ar'?'✅ الإجابة:':'✅ Answer:'};let html='',g=0;
-examData.sections.forEach((section,si)=>{const bc=['module-1','module-2','module-3','module-4','module-5','module-6'][si];html+='<section class="bg-white p-6 rounded-2xl shadow-lg border-2 border-amber-100"><div class="text-center mb-4"><span class="module-badge '+bc+'">'+section.title[currentLang]+'</span></div><ol class="space-y-4 text-sm">';
-section.questions.forEach(q=>{html+='<li class="border-r-4 border-amber-500 pr-4 py-2" id="q-'+g+'" style="border-right:4px solid #b45309;padding-right:1rem;"><strong class="text-amber-700">'+(g+1)+'.</strong> '+q.q[currentLang]+'<br>';
+examData.sections.forEach((section,si)=>{const bc=['module-1','module-2','module-3','module-4','module-5','module-6'][si];html+='<section class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-100"><div class="text-center mb-4"><span class="module-badge '+bc+'">'+section.title[currentLang]+'</span></div><ol class="space-y-4 text-sm">';
+section.questions.forEach(q=>{html+='<li class="border-r-4 border-green-500 pr-4 py-2" id="q-'+g+'" style="border-right:4px solid #15803d;padding-right:1rem;"><strong class="text-green-700">'+(g+1)+'.</strong> '+q.q[currentLang]+'<br>';
 if(q.svg)html+='<div class="graph-container">'+q.svg+'</div>';
-q.options.forEach((opt,oi)=>{html+='<label class="cursor-pointer block mt-2 mr-4 hover:bg-amber-50 rounded-lg p-2 transition" style="margin-right:1rem;"><input type="radio" name="q'+g+'" value="'+String.fromCharCode(97+oi)+'" class="mr-2 ml-2"><span class="arabic-math">'+lbl.option[oi]+' '+opt[currentLang]+'</span></label>'});
+q.options.forEach((opt,oi)=>{html+='<label class="cursor-pointer block mt-2 mr-4 hover:bg-green-50 rounded-lg p-2 transition" style="margin-right:1rem;"><input type="radio" name="q'+g+'" value="'+String.fromCharCode(97+oi)+'" class="mr-2 ml-2"><span class="arabic-math">'+lbl.option[oi]+' '+opt[currentLang]+'</span></label>'});
 html+='<div class="answer-box text-green-700 mt-3 font-medium '+(answersVisible?'':'hidden')+' bg-green-50 rounded-lg p-3 border border-green-200">'+lbl.answer+' '+lbl.option[q.correct]+' <span class="arabic-math">'+q.options[q.correct][currentLang]+'</span><br><span class="text-sm text-green-700 mt-2 block arabic-math">'+q.answer[currentLang]+'</span></div></li>';g++});
 html+='</ol></section>'});
 container.innerHTML=html}
@@ -418,15 +442,15 @@ function toggleAnswers(){answersVisible=!answersVisible;document.querySelectorAl
 function gradeExam(){let cc=0;const ss=new Array(TOTAL_SECTIONS).fill(0);
 for(let i=0;i<TOTAL_QUESTIONS;i++){const sel=document.querySelector('input[name="q'+i+'"]:checked');const li=document.getElementById('q-'+i);if(li){const ok=sel&&sel.value===correctAnswersMap[i];if(ok){cc++;li.classList.add('correct');li.classList.remove('incorrect');ss[Math.floor(i/QUESTIONS_PER_SECTION)]++}else{li.classList.add('incorrect');li.classList.remove('correct')}}}
 const score=Math.round(cc/TOTAL_QUESTIONS*100);document.getElementById('res-total').textContent=score+' / 100';document.getElementById('res-name').textContent=document.getElementById('studentName').value||(currentLang==='ar'?'بطل':'Champion');document.getElementById('res-date').textContent=new Date().toLocaleDateString(currentLang==='ar'?'ar-AE':'en-US');
-const pc=document.getElementById('sections-performance');pc.innerHTML='';examData.sections.forEach((s,i)=>{pc.innerHTML+='<div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="text-gray-700">'+s.title[currentLang]+'</span><span class="font-bold text-amber-700">'+ss[i]+'/'+QUESTIONS_PER_SECTION+'</span></div>'});
+const pc=document.getElementById('sections-performance');pc.innerHTML='';examData.sections.forEach((s,i)=>{pc.innerHTML+='<div class="flex justify-between items-center p-3 bg-white rounded-lg"><span class="text-gray-700">'+s.title[currentLang]+'</span><span class="font-bold text-green-700">'+ss[i]+'/'+QUESTIONS_PER_SECTION+'</span></div>'});
 const badge=document.getElementById('success-badge');document.getElementById('success-percent').textContent=score+'%';
 if(currentLang==='ar'){if(score>=90){badge.textContent='🌟 ممتاز جداً!';badge.className='success-badge grade-excellent'}else if(score>=75){badge.textContent='👏 ممتاز!';badge.className='success-badge grade-good'}else if(score>=50){badge.textContent='👍 جيد';badge.className='success-badge grade-pass'}else{badge.textContent='💪 حاول مرة أخرى';badge.className='success-badge grade-fail'}}
 else{if(score>=90){badge.textContent='🌟 Outstanding!';badge.className='success-badge grade-excellent'}else if(score>=75){badge.textContent='👏 Excellent!';badge.className='success-badge grade-good'}else if(score>=50){badge.textContent='👍 Good';badge.className='success-badge grade-pass'}else{badge.textContent='💪 Try Again';badge.className='success-badge grade-fail'}}
 document.getElementById('results-panel').classList.remove('hidden');document.getElementById('results-panel').scrollIntoView({behavior:'smooth'});if(timerInterval)clearInterval(timerInterval)}
 function sendResultsToEmail(){const btn=document.getElementById('sendEmailBtn'),status=document.getElementById('emailStatus');btn.disabled=true;btn.textContent=currentLang==='ar'?'⏳ جاري الإرسال...':'⏳ Sending...';
 const name=document.getElementById('studentName').value||'N/A',klass=document.getElementById('studentClass').value||'N/A',date=document.getElementById('examDate').value||new Date().toLocaleDateString(),score=document.getElementById('res-total').textContent,rate=document.getElementById('success-percent').textContent,badge=document.getElementById('success-badge').textContent;
-let qh='<div style="font-family:Arial;direction:rtl"><h2>🎯 '+(currentLang==='ar'?'نتيجة امتحان الأحداث المنفصلة - رياضيات 11 عام':'Mutually Exclusive Events Exam - Grade 11')+'</h2><p><b>الاسم:</b> '+name+'</p><p><b>الشعبة:</b> '+klass+'</p><p><b>التاريخ:</b> '+date+'</p><p><b>الدرجة:</b> '+score+' ('+rate+')</p><p><b>التقدير:</b> '+badge+'</p><hr><table style="width:100%;border-collapse:collapse"><tr style="background:#b45309;color:white"><th style="padding:8px;border:1px solid #ddd">#</th><th style="padding:8px;border:1px solid #ddd">السؤال</th><th style="padding:8px;border:1px solid #ddd">إجابة الطالب</th><th style="padding:8px;border:1px solid #ddd">الصحيحة</th><th style="padding:8px;border:1px solid #ddd">النتيجة</th></tr>';
-let g=0;examData.sections.forEach(sec=>{qh+='<tr style="background:#fef3c7"><td colspan="5" style="padding:8px;font-weight:bold;border:1px solid #ddd">'+sec.title.ar+'</td></tr>';sec.questions.forEach(q=>{const sel=document.querySelector('input[name="q'+g+'"]:checked');const sv=sel?sel.value:null;const cv=correctAnswersMap[g];const ic=sv===cv;let sat=sv?q.options[sv.charCodeAt(0)-97][currentLang]:(currentLang==='ar'?'❌ لم يجب':'❌ No answer');const sac=ic?'#16a34a':'#dc2626';const cat=q.options[q.correct][currentLang];const rb=ic?'#f0fdf4':'#fef2f2';qh+='<tr style="background:'+rb+'"><td style="padding:8px;border:1px solid #ddd;text-align:center">'+(g+1)+'</td><td style="padding:8px;border:1px solid #ddd">'+q.q.ar.replace(/<[^>]+>/g,'').substring(0,70)+'...</td><td style="padding:8px;border:1px solid #ddd;color:'+sac+'">'+sat+'</td><td style="padding:8px;border:1px solid #ddd;color:#16a34a">'+cat+'</td><td style="padding:8px;border:1px solid #ddd;text-align:center">'+(ic?'✅':'❌')+'</td></tr>';g++})});
+let qh='<div style="font-family:Arial;direction:rtl"><h2>🎯 '+(currentLang==='ar'?'نتيجة امتحان المنفصلة وغير المنفصلة (نسخة 2) - رياضيات 11 عام':'Exclusive Events V2 Exam - Grade 11')+'</h2><p><b>الاسم:</b> '+name+'</p><p><b>الشعبة:</b> '+klass+'</p><p><b>التاريخ:</b> '+date+'</p><p><b>الدرجة:</b> '+score+' ('+rate+')</p><p><b>التقدير:</b> '+badge+'</p><hr><table style="width:100%;border-collapse:collapse"><tr style="background:#15803d;color:white"><th style="padding:8px;border:1px solid #ddd">#</th><th style="padding:8px;border:1px solid #ddd">السؤال</th><th style="padding:8px;border:1px solid #ddd">إجابة الطالب</th><th style="padding:8px;border:1px solid #ddd">الصحيحة</th><th style="padding:8px;border:1px solid #ddd">النتيجة</th></tr>';
+let g=0;examData.sections.forEach(sec=>{qh+='<tr style="background:#dcfce7"><td colspan="5" style="padding:8px;font-weight:bold;border:1px solid #ddd">'+sec.title.ar+'</td></tr>';sec.questions.forEach(q=>{const sel=document.querySelector('input[name="q'+g+'"]:checked');const sv=sel?sel.value:null;const cv=correctAnswersMap[g];const ic=sv===cv;let sat=sv?q.options[sv.charCodeAt(0)-97][currentLang]:(currentLang==='ar'?'❌ لم يجب':'❌ No answer');const sac=ic?'#16a34a':'#dc2626';const cat=q.options[q.correct][currentLang];const rb=ic?'#f0fdf4':'#fef2f2';qh+='<tr style="background:'+rb+'"><td style="padding:8px;border:1px solid #ddd;text-align:center">'+(g+1)+'</td><td style="padding:8px;border:1px solid #ddd">'+q.q.ar.replace(/<[^>]+>/g,'').substring(0,70)+'...</td><td style="padding:8px;border:1px solid #ddd;color:'+sac+'">'+sat+'</td><td style="padding:8px;border:1px solid #ddd;color:#16a34a">'+cat+'</td><td style="padding:8px;border:1px solid #ddd;text-align:center">'+(ic?'✅':'❌')+'</td></tr>';g++})});
 qh+='</table></div>';
 emailjs.send(SERVICE_ID,TEMPLATE_ID,{to_email:TARGET_EMAIL,student_name:name,student_class:klass,exam_date:date,total_score:score,success_rate:rate,grade:badge,answers_table:qh})
 .then(()=>{status.textContent=currentLang==='ar'?'✅ تم الإرسال بنجاح!':'✅ Sent successfully!';status.style.color='#16a34a';btn.textContent=currentLang==='ar'?'✓ تم':'✓ Sent';alert(currentLang==='ar'?'تم إرسال النتيجة للمعلم بنجاح!':'Result sent to teacher successfully!')})
@@ -444,7 +468,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   prepareShuffledExam();renderExam();
   if(saved){if(saved.studentName)document.getElementById('studentName').value=saved.studentName;if(saved.studentClass)document.getElementById('studentClass').value=saved.studentClass;if(saved.examDate)document.getElementById('examDate').value=saved.examDate;if(saved.answers)restoreAnswers(saved.answers)}
   setupAnswerListeners();setupInputListeners();
-  document.getElementById('method-holder').innerHTML=svgGraphs.fig_rules;
+  document.getElementById('method-holder').innerHTML=svgGraphs.fig_decision;
   startTimer();
 });
 window.addEventListener('beforeunload',()=>saveState(false));
